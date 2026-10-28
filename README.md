@@ -14,7 +14,7 @@ This repository is published with [GitHub Pages](https://pages.github.com/). The
 | `Post_Scarcity_Occams_Razor.html` | **The Occam's Razor Abundance System (EN):** Achieving 90% of post-scarcity outcomes through 5 surgical statutory modifications inside existing capitalism | [Open](https://stasars.github.io/post-scarcity-architecture/Post_Scarcity_Occams_Razor.html) |
 | `Post_Scarcity_Occams_Razor_he.html` | **מערכת השפע לפי תערו של אוקהם (HE):** חמש התערבויות כירורגיות בתוך הקפיטליזם הקיים | [Open](https://stasars.github.io/post-scarcity-architecture/Post_Scarcity_Occams_Razor_he.html) |
 | `Post_Scarcity_Occams_Razor_ru.html` | **Система изобилия по бритве Оккама (RU):** Пять точечных реформ внутри существующего капитализма | [Open](https://stasars.github.io/post-scarcity-architecture/Post_Scarcity_Occams_Razor_ru.html) |
-| `Post_Scarcity_DeFi_Protocol.html` | **The Abundance Protocol (v2.0):** On-chain smart-contract specification synchronized with v5.0 (includes inline `#changelog`) | [Open](https://stasars.github.io/post-scarcity-architecture/Post_Scarcity_DeFi_Protocol.html) |
+| `Post_Scarcity_DeFi_Protocol.html` | **The Abundance Protocol (v2.0):** On-chain smart-contract specification synchronized with v5.0 | [Open](https://stasars.github.io/post-scarcity-architecture/Post_Scarcity_DeFi_Protocol.html) |
 
 ## Household Practical Guides & Summaries
 
