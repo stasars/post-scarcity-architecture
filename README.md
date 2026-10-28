@@ -2,27 +2,27 @@
 
 This repository is published with [GitHub Pages](https://pages.github.com/). The live site is available at:
 
-**https://stuk88.github.io/post-scarcity-architecture/**
+**https://stasars.github.io/post-scarcity-architecture/**
 
 ## Core Architecture Suite (v5.0 Closed-Loop Edition)
 
 | Document | Description | Live Link |
 | --- | --- | --- |
-| `index.html` / `Post_Scarcity_v5.html` | **The Abundance Paradox (v5.0, English):** Full 37-section closed-loop economic architecture | [Open](https://stuk88.github.io/post-scarcity-architecture/) |
-| `Post_Scarcity_v5_he.html` | **פרדוקס השפע (v5.0, Hebrew):** מהדורת לולאה סגורה מלאה (37 פרקים) | [Open](https://stuk88.github.io/post-scarcity-architecture/Post_Scarcity_v5_he.html) |
-| `Post_Scarcity_v5_ru.html` | **Парадокс изобилия (v5.0, Russian):** Издание с замкнутым контуром (37 разделов) | [Open](https://stuk88.github.io/post-scarcity-architecture/Post_Scarcity_v5_ru.html) |
-| `Post_Scarcity_Occams_Razor.html` | **The Occam's Razor Abundance System:** Achieving 90% of post-scarcity outcomes through 5 surgical statutory modifications inside existing capitalism | [Open](https://stuk88.github.io/post-scarcity-architecture/Post_Scarcity_Occams_Razor.html) |
-| `Post_Scarcity_DeFi_Protocol.html` | **The Abundance Protocol (v2.0):** On-chain smart-contract specification synchronized with v5.0 | [Open](https://stuk88.github.io/post-scarcity-architecture/Post_Scarcity_DeFi_Protocol.html) |
-| `CHANGELOG.md` | **Version History & Changelog:** Detailed engineering evolution from v1.0 through v5.0 | [Open](https://stuk88.github.io/post-scarcity-architecture/CHANGELOG.md) |
+| `index.html` / `Post_Scarcity_v5.html` | **The Abundance Paradox (v5.0, English):** Full 37-section closed-loop economic architecture | [Open](https://stasars.github.io/post-scarcity-architecture/) |
+| `Post_Scarcity_v5_he.html` | **פרדוקס השפע (v5.0, Hebrew):** מהדורת לולאה סגורה מלאה (37 פרקים) | [Open](https://stasars.github.io/post-scarcity-architecture/Post_Scarcity_v5_he.html) |
+| `Post_Scarcity_v5_ru.html` | **Парадокс изобилия (v5.0, Russian):** Издание с замкнутым контуром (37 разделов) | [Open](https://stasars.github.io/post-scarcity-architecture/Post_Scarcity_v5_ru.html) |
+| `Post_Scarcity_Occams_Razor.html` | **The Occam's Razor Abundance System:** Achieving 90% of post-scarcity outcomes through 5 surgical statutory modifications inside existing capitalism | [Open](https://stasars.github.io/post-scarcity-architecture/Post_Scarcity_Occams_Razor.html) |
+| `Post_Scarcity_DeFi_Protocol.html` | **The Abundance Protocol (v2.0):** On-chain smart-contract specification synchronized with v5.0 | [Open](https://stasars.github.io/post-scarcity-architecture/Post_Scarcity_DeFi_Protocol.html) |
+| `CHANGELOG.md` | **Version History & Changelog:** Detailed engineering evolution from v1.0 through v5.0 | [Open](https://stasars.github.io/post-scarcity-architecture/CHANGELOG.md) |
 
 ## Household Practical Guides & Summaries
 
 | Document | Description | Live Link |
 | --- | --- | --- |
-| `themarker_article_en.html` | **Household Practical Guide & Article (English):** How the Credit, UBA, housing, pensions, and services work in daily life | [Open](https://stuk88.github.io/post-scarcity-architecture/themarker_article_en.html) |
-| `themarker_article_he.html` | **מדריך מעשי למשק הבית ומאמר (Hebrew)** | [Open](https://stuk88.github.io/post-scarcity-architecture/themarker_article_he.html) |
-| `themarker_article_ru.html` | **Практический гид для домохозяйств и статья (Russian)** | [Open](https://stuk88.github.io/post-scarcity-architecture/themarker_article_ru.html) |
-| `pitch.html` / `Post_Scarcity_Pitch.html` | **1,000-Word Executive Summary / Forum Pitch** | [Open](https://stuk88.github.io/post-scarcity-architecture/pitch.html) |
+| `themarker_article_en.html` | **Household Practical Guide & Article (English):** How the Credit, UBA, housing, pensions, and services work in daily life | [Open](https://stasars.github.io/post-scarcity-architecture/themarker_article_en.html) |
+| `themarker_article_he.html` | **מדריך מעשי למשק הבית ומאמר (Hebrew)** | [Open](https://stasars.github.io/post-scarcity-architecture/themarker_article_he.html) |
+| `themarker_article_ru.html` | **Практический гид для домохозяйств и статья (Russian)** | [Open](https://stasars.github.io/post-scarcity-architecture/themarker_article_ru.html) |
+| `pitch.html` / `Post_Scarcity_Pitch.html` | **1,000-Word Executive Summary / Forum Pitch** | [Open](https://stasars.github.io/post-scarcity-architecture/pitch.html) |
 
 ## Historical Archive (v3 / v4)
 
