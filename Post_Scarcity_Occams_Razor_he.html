@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>מערכת השפע לפי תערו של אוקהם: חמש התערבויות כירורגיות בתוך הקפיטליזם הקיים</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --ink-light: #4a4a4a;
+      --ink-muted: #6b6b6b;
+      --ink-faint: #999;
+      --rule: #c8c0b8;
+      --rule-light: #e0dbd5;
+      --cream: #faf8f5;
+      --cream-deep: #f0ece6;
+      --paper: #ffffff;
+      --accent: #8b2500;
+      --accent-light: #a83a12;
+      --accent-bg: #fdf6f3;
+      --blue: #1a4a6b;
+      --blue-bg: #f4f7fa;
+      --green: #3d6b3a;
+      --green-bg: #f5f8f4;
+      --green-border: #6b8f5e;
+      --warn-bg: #fef9f0;
+      --warn-border: #c49a3c;
+      --dark-bg: #2a2320;
+      --dark-border: #5c4a3a;
+      --dark-text: #f0ece6;
+      --sidebar-w: 280px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Assistant', sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .suite-nav {
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule-light);
+      padding: 10px 24px;
+      margin-right: var(--sidebar-w);
+      font-family: 'Assistant', sans-serif;
+      font-size: 13px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 16px;
+      align-items: center;
+    }
+    .suite-nav .suite-label {
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--ink-faint);
+      font-size: 11.5px;
+      margin-left: 4px;
+    }
+    .suite-nav a {
+      color: var(--ink-light);
+      text-decoration: none;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border-bottom: none;
+    }
+    .suite-nav a:hover { background: var(--cream); color: var(--accent); }
+    .suite-nav a.current {
+      background: var(--accent-bg);
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0; right: 0;
+      width: var(--sidebar-w);
+      height: 100vh;
+      background: var(--paper);
+      border-left: 1px solid var(--rule-light);
+      overflow-y: auto;
+      padding: 28px 0 40px;
+      z-index: 100;
+      font-family: 'Assistant', sans-serif;
+      font-size: 13px;
+      line-height: 1.45;
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar-title {
+      padding: 0 20px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.03em;
+      border-bottom: 1px solid var(--rule-light);
+      margin-bottom: 12px;
+    }
+
+    .sidebar ol { list-style: none; padding: 0 12px; }
+    .sidebar li { margin: 0; }
+
+    .sidebar a {
+      display: block;
+      padding: 5px 10px;
+      color: var(--ink-light);
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.15s;
+    }
+
+    .sidebar a:hover { background: var(--cream); color: var(--accent); }
+    .sidebar a.active { background: var(--accent-bg); color: var(--accent); font-weight: 600; }
+
+    .sidebar .part-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-faint);
+      padding: 12px 10px 4px;
+      margin-top: 6px;
+    }
+
+    .main {
+      margin-right: var(--sidebar-w);
+      max-width: 780px;
+      padding: 40px 52px 120px;
+    }
+
+    .title-block {
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 2px solid var(--rule);
+    }
+
+    .title-block h1 {
+      font-size: 2.35rem;
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .title-block .subtitle {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--ink-light);
+      margin-bottom: 20px;
+    }
+
+    .title-block .meta {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    .title-block .meta span { display: inline-block; margin-left: 20px; }
+
+    .abstract {
+      background: var(--paper);
+      border: 1px solid var(--rule-light);
+      border-right: 4px solid var(--accent);
+      padding: 24px 28px;
+      margin-bottom: 40px;
+      font-size: 1.02rem;
+    }
+
+    .abstract-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-top: 52px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--rule-light);
+    }
+
+    h2 .num {
+      font-weight: 600;
+      font-size: 0.85em;
+      color: var(--accent);
+      margin-left: 6px;
+    }
+
+    p { margin-bottom: 14px; }
+    ul, ol { margin: 10px 24px 18px 0; }
+    li { margin: 6px 0; }
+    strong { font-weight: 700; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .principle {
+      background: var(--accent-bg);
+      border-right: 4px solid var(--accent);
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 0.96rem;
+    }
+
+    .principle .label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .proof {
+      background: var(--green-bg);
+      border-right: 4px solid var(--green-border);
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 0.96rem;
+    }
+
+    .proof .label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--green-border);
+      margin-bottom: 4px;
+    }
+
+    .problem-card {
+      background: var(--paper);
+      border: 1px solid var(--rule-light);
+      border-radius: 6px;
+      margin: 24px 0;
+      overflow: hidden;
+    }
+
+    .problem-header {
+      background: var(--accent-bg);
+      border-bottom: 1px solid var(--rule-light);
+      padding: 14px 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .problem-body {
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--rule-light);
+    }
+
+    .solution-header {
+      background: var(--green-bg);
+      border-bottom: 1px solid var(--rule-light);
+      padding: 14px 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .solution-body {
+      padding: 18px 20px;
+    }
+
+    .arch-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.92rem;
+    }
+
+    .arch-table th {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--ink-muted);
+      text-align: right;
+      padding: 10px 14px;
+      border-bottom: 2px solid var(--rule);
+      background: var(--cream);
+    }
+
+    .arch-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--rule-light);
+      vertical-align: top;
+    }
+
+    .arch-table tr:last-child td { border-bottom: 2px solid var(--rule); }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: var(--rule-light);
+      margin: 40px 0;
+    }
+
+    .footnote {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--rule-light);
+    }
+
+    .menu-toggle {
+      display: none;
+      position: fixed;
+      top: 14px; right: 14px;
+      z-index: 200;
+      background: var(--paper);
+      border: 1px solid var(--rule-light);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 12px;
+      cursor: pointer;
+      color: var(--ink-light);
+    }
+
+    @media print {
+      .sidebar, .suite-nav { display: none; }
+      .main { margin-right: 0; max-width: 100%; padding: 24px; }
+      body { font-size: 11pt; background: white; }
+    }
+
+    @media (max-width: 960px) {
+      .sidebar { transform: translateX(100%); }
+      .sidebar.open { transform: translateX(0); box-shadow: -4px 0 20px rgba(0,0,0,0.1); }
+      .suite-nav { margin-right: 0; padding-right: 110px; }
+      .main { margin-right: 0; padding: 32px 24px 80px; }
+      .title-block h1 { font-size: 2rem; }
+      .menu-toggle { display: block !important; }
+    }
+  </style>
+</head>
+<body>
+
+<button class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">&#9776; תוכן</button>
+
+<!-- ════════════════════════════════════════════ SUITE NAV ════════════════════════════════════════════ -->
+<div class="suite-nav">
+  <span class="suite-label">סדרת המחקר:</span>
+  <a href="Post_Scarcity_v5_he.html">הספר הלבן המלא (v5.0)</a>
+  <a href="Post_Scarcity_Occams_Razor_he.html" class="current">מהדורת תערו של אוקהם</a>
+  <a href="Post_Scarcity_DeFi_Protocol.html">פרוטוקול הבלוקצ׳יין (v2.0)</a>
+  <a href="themarker_article_he.html">כתבת העומק והמדריך למשק הבית</a>
+  <a href="#changelog">יומן שינויים</a>
+</div>
+
+<!-- ════════════════════════════════════════════ SIDEBAR ════════════════════════════════════════════ -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-title">תוכן העניינים</div>
+  <ol>
+    <li><a href="#abstract">תקציר</a></li>
+
+    <li class="part-label">חלק א׳: התער</li>
+    <li><a href="#s1">1. למה להפעיל את תערו של אוקהם?</a></li>
+    <li><a href="#s2">2. מה השוק הקיים כבר פותר היטב</a></li>
+    <li><a href="#s3">3. חמשת הטפילים שחוסמים שפע</a></li>
+
+    <li class="part-label">חלק ב׳: 5 ההתערבויות</li>
+    <li><a href="#s4">4. התערבות 1: דיבידנד פריון + שריפת קרקע/אנרגיה</a></li>
+    <li><a href="#s5">5. התערבות 2: פדיון פטנטים לנחלת הכלל</a></li>
+    <li><a href="#s6">6. התערבות 3: תאגידים בבעלות קרנות נאמנות</a></li>
+    <li><a href="#s7">7. התערבות 4: אחריות ל-10 שנים ומס פרסום</a></li>
+    <li><a href="#s8">8. התערבות 5: תגמולי Qui Tam וחבר מושבעים</a></li>
+
+    <li class="part-label">חלק ג׳: מבחן מאמץ</li>
+    <li><a href="#s9">9. למה לא צריך לבטל את מנגנון המחירים</a></li>
+    <li><a href="#s10">10. למה לא צריך לסגור את הבנקים</a></li>
+    <li><a href="#s11">11. סגירת 6 פרצות ההתחמקות</a></li>
+
+    <li class="part-label">חלק ד׳: השוואה וחקיקה</li>
+    <li><a href="#s12">12. תערו של אוקהם מול v5.0 המלא</a></li>
+    <li><a href="#s13">13. חמש הצעות החוק ליום הראשון</a></li>
+    <li><a href="#s14">14. סיכום: הגשר אל v5.0</a></li>
+    <li><a href="#changelog">15. יומן שינויים מובנה</a></li>
+  </ol>
+</nav>
+
+<!-- ════════════════════════════════════════════ MAIN ════════════════════════════════════════════ -->
+<div class="main">
+
+  <div class="title-block">
+    <h1>מערכת השפע לפי תערו של אוקהם</h1>
+    <div class="subtitle">השגת 90% מתוצאות כלכלת הפוסט-מחסור באמצעות חמישה תיקוני חקיקה כירורגיים בתוך הקפיטליזם הקיים</div>
+    <div class="meta">
+      <span>סטניסלב ארשנסקי</span>
+      <span>אוקטובר 2026</span>
+      <span>מאמר משלים ל-<a href="Post_Scarcity_v5_he.html">פרדוקס השפע (גרסה 5.0)</a></span>
+      <span><a href="Post_Scarcity_Occams_Razor.html">EN</a> | <a href="Post_Scarcity_Occams_Razor_ru.html">RU</a> | <strong>HE</strong></span>
+    </div>
+  </div>
+
+  <div class="abstract" id="abstract">
+    <div class="abstract-label">תקציר</div>
+    <p>
+      הספר הלבן הראשי, <em><a href="Post_Scarcity_v5_he.html">פרדוקס השפע (גרסה 5.0)</a></em>, מתכנן מאפס מערכת הפעלה כלכלית מלאה לעידן שלאחר-המחסור: החלפת תמחור השוק בלולאת גילוי אבולוציונית, החלפת קרנות הון סיכון בהגרלות קריפטוגרפיות, החלפת מניות תאגידיות בארגונים ללא מטרות רווח הממומנים מפרוטוקול, והחלפת מטבע הפיאט במטבע Credit צמוד-סל. אף שהארכיטקטורה המלאה סגורה מתמטית מכל כיוון, היא דורשת הקמת מוסדות מקבילים מהיסוד.
+    </p>
+    <p>
+      מסמך משלים זה שואל את <strong>שאלת תערו של אוקהם</strong>: <em>מהו המספר המינימלי המוחלט של שינויים שאנו יכולים לבצע במערכת הקפיטליסטית הקיימת היום (תוך השארת מחירים רגילים, מטבעות קיימים כמו שקל/דולר/אירו, שרשראות אספקה, עסקים קטנים ודיני חוזים על כנם) כדי לחסל את המחסור המלאכותי ולחלק את דיבידנד השפע של המכונות לכלל האזרחים?</em>
+    </p>
+    <p>
+      באמצעות אבחון חמש הנקודות המדויקות שבהן הקפיטליזם הופך שפע טכנולוגי למחסור מלאכותי, אנו מוכיחים ש<strong>ניתן להשיג כ-90% מתוצאות כלכלת הפוסט-מחסור באמצעות חמישה כלים משפטיים ומוניטריים שכבר פועלים ונוסו בהצלחה</strong> בחלקים שונים בדנמרק, נורווגיה, סינגפור, גרמניה וארצות הברית:
+      (1) <strong>דיבידנד פריון ריבוני מהבנק המרכזי (CBDC UBI) לצד מס שריפה על ערך קרקע ואקסרגיה</strong>;
+      (2) <strong>פדיון פטנטים וקניין רוחני אוטומטי לנחלת הכלל + קרנות פרסי אימפקט</strong>;
+      (3) <strong>בעלות נאמנותית חובה (מודל הקרנות התעשייתיות הדני של Novo Nordisk ו-Bosch) לחברות מעל מחזור של 50 מיליון דולר</strong>;
+      (4) <strong>אחריות יצרן חוקית ל-10 שנים + ביטול ההכרה בפרסום כהוצאה מוכרת למס</strong>; ו-
+      (5) <strong>תגמולי חושפי שחיתויות (Qui Tam, 30% מהקנסות) הנידונים בפני חבר מושבעים אקראי של אזרחים</strong>.
+    </p>
+  </div>
+
+  <h2 id="s1"><span class="num">1.</span> למה להפעיל את תערו של אוקהם על תכנון כלכלי?</h2>
+  <p>
+    בהנדסת מערכות, כל רכיב חדש שמתווסף למערכת מייצר חיכוך מעבר, עומס קוגניטיבי ומקרי קצה בלתי צפויים. הארכיטקטורה המלאה של <em>פרדוקס השפע (v5.0)</em> היא מפרט "לוח חלק" (Clean-Slate): היא מוכיחה שניתן לסגור כלכלה ללא מניות וללא שוק מפני כל מתקפה מתורת המשחקים. ואולם עבור פרלמנט מכהן, בנק מרכזי או מצביע במדינת OECD קיימת, החלפת מערכת המחירים, דיני החברות ומערכת הבנקאות בבת אחת היא קפיצה מוסדית אדירה.
+  </p>
+  <div class="principle">
+    <div class="label">שאלת תערו של אוקהם</div>
+    אם נשאיר 95% ממכונת השוק היומיומית ללא שינוי (מחירי היצע וביקוש רגילים, מטבעות לאומיים קיימים, תעסוקה חופשית, עסקים קטנים ובתי משפט קיימים), מהי <strong>קבוצת החוקים הכירורגית הקטנה ביותר</strong> שתאלץ כלכלה קפיטליסטית מודרנית לייצר שפע אמיתי במקום מחסור מלאכותי?
+  </div>
+
+  <h2 id="s2"><span class="num">2.</span> מה שווקים קיימים כבר עושים מצוין (ולא צריך להחליף)</h2>
+  <p>
+    לפני שחותכים דבר מה, מהנדס מערכות ישר מונה את מה שכלכלת השוק הקיימת כבר פותרת בעלות ניהולית אפסית:
+  </p>
+  <ul>
+    <li><strong>אותות מחיר מבוזרים לתיאום יומיומי (מנגנון האייק):</strong> כשקרה פוגעת ביבולי הקפה בברזיל או כשנתיב שיט נסגר, המחירים היחסיים מתעדכנים תוך דקות בעשרה מיליון בתי קפה ומאותתים לצרכנים ולספקים להסתגל בלי לחכות לוועדה מרכזית.</li>
+    <li><strong>יזמות ללא צורך באישור לעסקים קטנים ובינוניים:</strong> כל אדם יכול היום לפתוח מאפייה, עסק לאינסטלציה, סטודיו לתוכנה או מסגרייה באמצעות חוזים מסחריים רגילים בלי לחכות להגרלת מענקים חצי-שנתית.</li>
+    <li><strong>הון חוזר וסליקת שרשראות אספקה:</strong> רשתות הסליקה המסחריות ומערכות ה-ERP הקיימות כבר מזרימות טריליוני דולרים של חומרי גלם מעבר לגבולות מדי 24 שעות.</li>
+  </ul>
+  <p>
+    אף אחד ממנגנוני התיאום הללו אינו הגורם לפרדוקס המחסור. מחירים חופשיים לא גורמים לאינסולין לעלות 300 דולר כשייצורו עולה 5 דולרים. שוק תחרותי אמיתי דוחף את המחיר <em>למטה</em> אל העלות השולית (<em>P &rarr; MC</em>). מה שמונע מהמחירים לרדת לעלות השולית בקפיטליזם המודרני הוא <strong>חמש פריבילגיות משפטיות ספציפיות (מונופולים לחילוץ רנטה)</strong> שהמדינה מעניקה להון המרוכז.
+  </p>
+
+  <h2 id="s3"><span class="num">3.</span> חמשת הטפילים המשפטיים שחוסמים את השפע</h2>
+  <table class="arch-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>הפתולוגיה בספר הלבן הראשי</th>
+        <th>החוק הספציפי שגורם לה היום</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><strong>קריסת שכר דפלציונית ושעבוד לחוב</strong> (מכונות מחליפות עובדים; לצרכנים אין כסף לקנות את השפע)</td>
+        <td><strong>מונופול הבנקים הפרטיים על יצירת כסף-חוב:</strong> כסף חדש נוצר רק כשבנקים מסחריים מנפיקים הלוואות בריבית לרוכשי נכסים (אפקט קנטיליון), במקום שיונפק ללא חוב לאזרחים ככל שהפריון עולה.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>ההוכחה הפרמצבטית והדיגיטלית</strong> (אינסולין ב-300 דולר, נעילת קוד בעלות שולית אפסית, הזנחת מחלות עניים)</td>
+        <td><strong>מונופול פטנטים וקניין רוחני ל-20 שנה:</strong> המדינה אוסרת בחוק על מתחרים לייצר מולקולות מצילות חיים או להעתיק תוכנה בעלות שולית.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>אוליגרכיית <em>r &gt; g</em> של פיקטי וחילוץ קצר-טווח</strong> (חברות פוגעות באיכות ומצמצמות היצע כדי לנפח מניות)</td>
+        <td><strong>מניות סחירות לנצח והשתלטויות עוינות:</strong> תאגידים ציבוריים מחויבים משפטית למקסם רווח קצר-טווח עבור ספקולנטים פיננסיים חיצוניים.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>התיישנות מתוכננת ורצון מיוצר</strong> (מכשירים שמתוכננים להתקלקל; שליש מהתוצר מתבזבז על שיווק)</td>
+        <td><strong>החצנת עלויות החלפה וסבסוד מס לפרסום:</strong> פקודת המס מסבסדת טריליונים בפרסום מניפולטיבי כ"הוצאה מוכרת ב-100%" ומתירה למכור מוצרים קצרי-חיים ללא אחריות ארוכת טווח.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>שבי רגולטורי</strong> (מונופולים קונים רגולטורים ומתישים תובעים ממשלתיים)</td>
+        <td><strong>אכיפה בירוקרטית ריכוזית:</strong> הפיקוח מופקד בידי רשויות ממשלתיות שראשיהן עוברים בדלת המסתובבת לדירקטוריונים של החברות המפוקחות.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2 id="s4"><span class="num">4.</span> התערבות 1: דיבידנד פריון ריבוני + מס שריפה על ערך קרקע ואקסרגיה</h2>
+  <div class="problem-card">
+    <div class="problem-header">מחליף ב-v5.0 המלא את: מטבע ה-Credit הייעודי, סליקת PVEL, דמיורג' ועקומת ההבשלה</div>
+    <div class="problem-body">
+      <p>במקום להמציא מטבע חדש, שומרים על המטבע הלאומי הקיים (שקל, דולר, אירו) ומשנים את האופן שבו הבנק המרכזי ומשרד האוצר מנהלים את היצע הכסף.</p>
+    </div>
+    <div class="solution-header">מנגנון תערו של אוקהם: דיבידנד ישיר מהבנק המרכזי + תנור שריפה ג'ורג'יסטי</div>
+    <div class="solution-body">
+      <ol>
+        <li><strong>דיבידנד פריון מהבנק המרכזי (Mint-First UBI):</strong> כיום, כשבנקים מרכזיים רוצים למנוע דפלציה או להזרים נזילות, הם מדפיסים כסף דרך הרחבה כמותית (QE – קניית אג"ח מבנקים שמנפחת נדל"ן ומניות) או הורדת ריבית להלוואות בנקאיות. תחת התערבות 1, חוק הבנק המרכזי מעודכן: <strong>100% מהרחבת היצע הכסף השנתית הלא-אינפלציונית (בהתאם לצמיחת הפריון הכולל הריאלי <em>&Delta;Y<sub>real</sub></em>) מונפקת ללא חוב ישירות לחשבון הדיגיטלי של כל אזרח כדיבידנד חודשי אוניברסלי.</strong> ככל ש-AI ורובוטים מוזילים את הייצור, המרווח הדפלציוני מתורגם מיד למזומן נקי מחוב בכיסי האזרחים.</li>
+        <li><strong>ביטול מס הכנסה על עבודה והחלפתו בשני מסי שריפה פיזיים שאי אפשר להעלים:</strong> מיסוי עבודה אנושית מעניש עובדים ומאיץ החלפת עובדים ברובוטים. אנו מבטלים את מס ההכנסה ודמי הביטוח על שכר עבודה (עד פי 5 מהשכר החציוני) ומחליפים אותם בשני מסים שאף חברת קש באיי קיימן לא יכולה להתחמק מהם:
+          <ul>
+            <li><strong>מס ערך קרקע ג'ורג'יסטי (LVT של 3% עד 5% בשנה על שווי הקרקע הבלתי-מפותחת):</strong> במודל של סינגפור, אסטוניה ודנמרק (<em>Grundskyld</em>). אי אפשר להבריח מגרש בתל אביב או במנהטן למקלטי מס. מס ערך קרקע הופך אגירת קרקעות ספקולטיבית להפסד ומאלץ בעלי קרקעות לבנות דיור או למכור לדיירים.</li>
+            <li><strong>מס אקסרגיה ומשאבי טבע במקור:</strong> נגבה ישירות בתחנת הכוח, במכרה, בנמל הייבוא ובשנאי של חוות השרתים (לפי מגה-וואט/שעה, טון מחצבים או פליטת פחמן).</li>
+          </ul>
+        </li>
+        <li><strong>תרמוסטט האינפלציה האוטומטי:</strong> ההכנסות ממס הקרקע ומס האקסרגיה אינן מועברות לפוליטיקאים לבזבוזים; הן <strong>נשרפות אוטומטית (נגרעות מהיצע הכסף) בכל פעם שמדד המחירים לצרכן (CPI) חוצה את רף ה-2.0%</strong>. כל עוד האינפלציה מתחת ל-2.0%, הבנק המרכזי מגדיל את הדיבידנד החודשי לאזרחים.</li>
+      </ol>
+      <div class="proof">
+        <div class="label">תקדימים קיימים בעולם האמיתי</div>
+        דיבידנד קרן אלסקה (מאז 1982); מערכת חכירת הקרקעות של סינגפור (מעל 80% בעלות על דירה); מס הקרקע המוניציפלי בדנמרק.
+      </div>
+    </div>
+  </div>
+
+  <h2 id="s5"><span class="num">5.</span> התערבות 2: פדיון פטנטים אוטומטי לנחלת הכלל (קרנות פרסים במקום מונופול)</h2>
+  <div class="problem-card">
+    <div class="problem-header">מחליף ב-v5.0 המלא את: ביטול המו"פ הפרטי ומאגרי ההגרלה הרב-שכבתיים</div>
+    <div class="problem-body">
+      <p>הסיבה היחידה שחברת תרופות יכולה לגבות 300 דולר על אינסולין שעולה 5 דולרים היא מונופול פטנט שהמדינה אוכפת עבורה. אך אם רק נבטל פטנטים בלי לשלם לממציאים, המו"פ הפרטי ייעצר.</p>
+    </div>
+    <div class="solution-header">מנגנון תערו של אוקהם: פדיון פטנטים חוקי לפי אימפקט (מודל קרמר / שטיגליץ)</div>
+    <div class="solution-body">
+      <ol>
+        <li><strong>פדיון אוטומטי לנחלת הכלל ביום האישור:</strong> כשחברת ביומד, מכשור רפואי, אנרגיה נקייה או תוכנה מפתחת פריצת דרך מאומתת, "הקרן הציבורית לפדיון חדשנות" (בסמכות הפקעה קיימת כגון 28 U.S.C. &sect; 1498) <strong>רוכשת את הפטנט ומשחררת את הנוסחה או הקוד מיד לנחלת הכלל בקוד פתוח</strong>.</li>
+        <li><strong>תמלוגי אימפקט ל-5 שנים (בלי ניחושים של ועדות):</strong> הממציא מקבל זרם תמלוגים אוטומטי ל-5 שנים מהקרן הציבורית <strong>באופן יחסי לאימוץ האמיתי בשטח ולשנות החיים הבריאות (QALYs) או החיסכון המוכח שנוצר אצל כלל היצרנים הגנריים</strong>.</li>
+        <li><strong>תחרות גנרית מיידית בעלות שולית:</strong> כבר ביום הראשון לאחר אישור ה-FDA/משרד הבריאות, כל מפעל מוסמך רשאי לייצר את התרופה בתחרות חופשית. המחיר לצרכן ולבתי החולים צונח לעלות הייצור השולית (3–5 דולרים) ביום הראשון, בעוד שהממציא מרוויח תשואה אדירה ככל שיותר חולים נרפאים!</li>
+      </ol>
+      <div class="proof">
+        <div class="label">תקדימים קיימים בעולם האמיתי</div>
+        מנגנון Advance Market Commitments של חתן פרס נובל מייקל קרמר (שהציל מעל 700,000 חיים בחיסוני דלקת ריאות); רכישת פטנט הצילום של לואי דאגר על ידי ממשלת צרפת ב-1839 ושחרורו החופשי לעולם.
+      </div>
+    </div>
+  </div>
+
+  <h2 id="s6"><span class="num">6.</span> התערבות 3: בעלות נאמנותית חובה מעל גודל סף (מודל הקרנות התעשייתיות הדני)</h2>
+  <div class="problem-card">
+    <div class="problem-header">מחליף ב-v5.0 המלא את: איסור ההשקעה הפרטית, דילול 15 השנים וחוזה הגרדיאנט החסום</div>
+    <div class="problem-body">
+      <p>עסקים קטנים ובינוניים כמעט לעולם אינם המקור להשחתת המדינה; הפתולוגיה נובעת מתאגידי ענק שנסחרים כז'יטונים ספקולטיביים בבורסה, שבהם קרנות גידור מכריחות מנהלים לחתוך באיכות, לדכא שכר ולקנות פוליטיקאים.</p>
+    </div>
+    <div class="solution-header">מנגנון תערו של אוקהם: המרה אוטומטית של תאגידי ענק לקרנות תעשייתיות בבעלות עצמית</div>
+    <div class="solution-body">
+      <p>איננו צריכים להמציא צורת התאגדות חדשה. <strong>דנמרק וגרמניה כבר מפעילות את ענקיות התרופות, הספנות, ההנדסה והקמעונאות המצליחות בעולם כקרנות תעשייתיות ללא מטרות רווח (Steward-Owned Enterprises):</strong> Novo Nordisk, Maersk, Carlsberg, Bosch, Carl Zeiss ו-Rolex.</p>
+      <ol>
+        <li><strong>הון פרטי חופשי לסטארט-אפים ועסקים קטנים (מתחת ל-50 מיליון דולר):</strong> יזמים וקרנות הון סיכון יכולים להקים חברות, לקחת סיכון ולקבל תשואת פדיון מוגדרת של עד <strong>פי 5 עד פי 10</strong> על הונם הראשוני.</li>
+        <li><strong>המרה חוקית לבעלות נאמנותית בבגרות:</strong> ברגע שחברה חוצה מחזור שנתי של 50 מיליון דולר (או משלימה את מכפיל הפדיון ליזמים), מניות השליטה שלה מומרות כחוק ל<strong>קרן תעשייתית בבעלות עצמית ללא בעלי מניות חיצוניים</strong> (עם נעילת נכסים המונעת חלוקת דיבידנד פרטי או השתלטות עוינת).</li>
+        <li><strong>תקרת שכר פנימית של 15:1:</strong> כתנאי לאחריות מוגבלת, כל תאגיד נאמנותי מחויב לשמור על יחס מקסימלי של <strong>15:1 בין שכר הבכיר ביותר (כולל בונוסים) לשכר העובד החציוני במשרה מלאה</strong>. כדי להעלות את שכר המנכ"ל, החברה חייבת להעלות את שכר העובדים או להוריד מחירים לצרכן.</li>
+      </ol>
+      <div class="proof">
+        <div class="label">תקדימים קיימים בעולם האמיתי</div>
+        בדנמרק, קרנות תעשייתיות (<em>Erhvervsdrivende fonde</em>) מהוות מעל <strong>60% משווי השוק הכולל של בורסת קופנהגן</strong>, ומוכיחות אמפירית שבעלות נאמנותית ללא מטרות רווח מנצחת את וול סטריט במו"פ ארוך-טווח וביציבות.
+      </div>
+    </div>
+  </div>
+
+  <h2 id="s7"><span class="num">7.</span> התערבות 4: אחריות יצרן חוקית ל-10 שנים + ביטול סבסוד המס לפרסומות</h2>
+  <div class="problem-card">
+    <div class="problem-header">מחליף ב-v5.0 המלא את: זירת המסחר העובדתית והוצאת השיווק מחוץ לחוק</div>
+    <div class="problem-body">
+      <p>איסור פלילי על שיווק מעורר התנגשויות חוקתיות סביב חופש הביטוי, ובדיקה מוקדמת של כל מוצר דורשת בירוקרטיה. ניתן להשיג את אותה תוצאה בדיוק באמצעות שני תיקונים בני עמוד אחד בפקודת המס ובחוק הגנת הצרכן:</p>
+    </div>
+    <div class="solution-header">מנגנון תערו של אוקהם: היפוך תמריצי האחריות והמיסוי</div>
+    <div class="solution-body">
+      <ol>
+        <li><strong>אחריות תיקון/החלפה מלאה ל-10 שנים ושרטוטים פתוחים:</strong> כל מכשיר חשמלי, רכב, טלפון או מכונה תעשייתית נמכרים עם <strong>אחריות יצרן חוקית בלתי-ניתנת-להתניה ל-5 עד 10 שנים</strong> פלוס חובת פרסום של ספרי תיקון וקבצי חלפים (CAD) במחיר עלות. אם מכונת כביסה מתקלקלת בשנה השישית, היצרן מתקן או מחליף אותה בחינם. בן לילה, התיישנות מתוכננת הופכת ממקור רווח לאסון מאזני עבור היצרן, ומאלצת מהנדסים לחזור לייצר מכשירים שמחזיקים 25 שנה.</li>
+        <li><strong>ביטול ההכרה בפרסום כהוצאה מוכרת + מס פיגוביאני של 100%:</strong> כיום תאגידים מנכים 100% מתקציבי הפרסום מהמס שלהם (כלומר הציבור מסבסד רבע מכל שלט חוצות ופרסומת מעקב). אנו פשוט <strong>מבטלים את ההכרה בפרסום מסחרי כהוצאה מוכרת ומטילים מס קשב פיגוביאני של 100% על תקציבי פרסום מעל 100 אלף דולר בשנה</strong> (בעוד שמפרטים טכניים עובדתיים, ביקורות משתמשים פתוחות ותוויות קליניות פטורים ממס). שום מילה לא מצונזרת; שיווק מניפולטיבי פשוט הופך ליקר פי ארבעה מהורדת מחיר המוצר לצרכן.</li>
+      </ol>
+    </div>
+  </div>
+
+  <h2 id="s8"><span class="num">8.</span> התערבות 5: תגמולי חושפי שחיתויות (Qui Tam) + חבר מושבעים אזרחי אקראי</h2>
+  <div class="problem-card">
+    <div class="problem-header">מחליף ב-v5.0 המלא את: חוזי הביקורת המבוזרת ומועצות הסורטיציה</div>
+    <div class="problem-body">
+      <p>איך מונעים מתאגידים ופוליטיקאים להשחית רגולטורים בלי לבנות מערכת משטרית חדשה מאפס?</p>
+    </div>
+    <div class="solution-header">מנגנון תערו של אוקהם: אוניברסליזציה של חוק ה-False Claims האמריקאי + משפט מושבעים אזרחי</div>
+    <div class="solution-body">
+      <ol>
+        <li><strong>תגמולי אכיפה פרטית אוניברסליים (<em>Qui Tam</em> – 30% מקנסות משולשים):</strong> תחת חוק ה-False Claims האמריקאי הקיים (31 U.S.C. &sect; 3729), כל אזרח, עובד פנימי או משרד ביקורת עצמאי שחושף הונאה נגד הציבור רשאי לתבוע בשם הציבור ולקבל כחוק <strong>15% עד 30% מקנסות העתק המשולשים</strong>. אנו מרחיבים את זכות התביעה הזו ממרמה בחוזים ממשלתיים ל<strong>כל הפרה אקולוגית, קרטל תיאום מחירים, התחמקות מאחריות יצרן, הסתרת נתוני בטיחות והטיית אלגוריתמים</strong>.</li>
+        <li><strong>הכרעה בידי חבר מושבעים אקראי של 12 אזרחים (אפס רגולטורים שבויים):</strong> תביעות <em>Qui Tam</em> אינן מוכרעות על ידי רגולטור ממונה שמחפש ג'וב בתאגיד בשנה הבאה, אלא בפני <strong>חבר מושבעים אקראי של 12 אזרחים</strong> (הנעזר במומחים טכניים ניטרליים מטעם בית המשפט), לצד <strong>חוק חנינה אוטומטי לעד מדינה תאגידי</strong> (השותף הראשון בקרטל שמדליף ראיות מקבל חסינות מלאה ו-30% מהפרס הכספי).</li>
+      </ol>
+      <div class="proof">
+        <div class="label">תקדימים קיימים בעולם האמיתי</div>
+        חוק ה-<em>Qui Tam</em> האמריקאי החזיר לקופה הציבורית מעל <strong>75 מיליארד דולר</strong> מאז 1986, כשמעל 70% מהתיקים נפתחו על ידי חושפי שחיתויות פרטיים ולא על ידי מפקחים ממשלתיים.
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2 id="s9"><span class="num">9.</span> למה מודל תערו של אוקהם לא צריך לבטל את מנגנון המחירים?</h2>
+  <p>
+    בחלק א׳ של הספר הלבן הראינו ששפע מרסק את ערך החליפין לאפס (<em>V = D / S &rarr; 0</em>), מה שגורם לחברות למטרות רווח להגביל היצע באופן מלאכותי. מדוע זה לא קורה כאן אם אנחנו משאירים מחירי שוק רגילים?
+  </p>
+  <p>
+    מפני שפרדוקס המחסור גורם להגבלת היצע רק כאשר <strong>(א) לחברה יש מונופול פטנט או קרקע שמונע ממתחרים להעתיק את הייצור הזול שלה</strong>, ו-<strong>(ב) החברה נשלטת על ידי בעלי מניות שדורשים שולי רווח מונופוליסטיים</strong>. תחת התערבויות 1 עד 4: ברגע שמומצאת דרך לייצר פאנל סולארי או תרופה בעשירית מחיר, <strong>התערבות 2 (פדיון פטנטים)</strong> מתגמלת את הממציא ברוחב יד ופותחת את התוכנית לכלל היצרנים; מכיוון שהתאגידים הגדולים הם <strong>קרנות נאמנותיות ללא בעלי מניות (התערבות 3)</strong>, התחרות מורידה מיד את המחיר לעלות הפיזית והאנרגטית השולית (<em>P = MC</em>); וככל שהמחירים במשק יורדים (דפלציה טכנולוגית מבורכת), <strong>התערבות 1 (דיבידנד הפריון מהבנק המרכזי)</strong> מזרימה כסף חדש ללא חוב ישירות לארנקי האזרחים, כך שהביקוש המצרפי לעולם לא קורס.
+  </p>
+
+  <h2 id="s10"><span class="num">10.</span> למה לא צריך לסגור את הבנקים המסחריים (בנקאות צרה + חלון אשראי ציבורי)</h2>
+  <p>
+    במקום לסגור בנקים קיימים, המודל מיישם את "תוכנית שיקגו" (כלל 100% רזרבה של אירווינג פישר ומילטון פרידמן) באמצעות שינוי תשתיתי אחד: אזרחים מחזיקים את כספם ישירות בחשבונות דיגיטליים בבנק המרכזי (ומקבלים אליהם את דיבידנד הפריון באפס סיכון לפשיטת רגל בנקאית); בנקים פרטיים הופכים למתווכי השקעות טהורים שיכולים להלוות רק פיקדונות שחסכונות ננעלו בהם במפורש; והבנק המרכזי מעמיד קווי אשראי להון חוזר ותשתיות ב-0%–1% ריבית דרך בנקים קואופרטיביים ומקומיים (במודל ה-<em>Sparkassen</em> וה-<em>KfW</em> הגרמני שמממן 70% מהתעשייה הגרמנית).
+  </p>
+
+  <h2 id="s11"><span class="num">11.</span> סגירת 6 פרצות ההתחמקות (אפס נפנופי ידיים)</h2>
+  <table class="arch-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>טקטיקת ההתחמקות הקפיטליסטית</th>
+        <th>הסגירה החוקית בלולאה סגורה</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><strong>רישום חברה במקלט מס זר</strong> (חברת 50 מיליון דולר עוברת לדלאוור או אירלנד כדי להתחמק מבעלות נאמנותית)</td>
+        <td><strong>התניית גישה לשוק לפי מיקום הצרכן (כלל Wayfair / EU DMA):</strong> גישה לשוק המקומי ואחריות מוגבלת מותנות בציות לחוק ללא קשר למקום רישום הקליפה. חברה זרה עם מכירות מקומיות מעל 50 מיליון דולר שמסרבת למודל הנאמנותי משלמת מכס איזון של 25% ישירות לקרן פדיון הפטנטים.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>פיצול חברה ל-10 חברות בת של 49 מיליון דולר</strong></td>
+        <td><strong>איחוד בעלות מועילה (26 U.S.C. &sect; 1563) + פרסי Qui Tam:</strong> סכימת מחזורים אוטומטית של כל ישויות החולקות מעל 20% בעלות, קניין רוחני או שרשרת אספקה, הנאכפת על ידי ציידי פרסים פרטיים (30% מהקנס).</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>הסוואת דיבידנדים כחוזי ייעוץ מנופחים למקורבים</strong></td>
+        <td><strong>שקיפות חוזי ספקים מעל 100 אלף דולר + פרס עד מדינה:</strong> חובת פרסום פומבי של כל התקשרות ספקים; העברה לצד קשור לא מדווח מפעילה קנסות משולשים ופרס של 30% לכל עובד פנימי שמדליף את העסקה.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>ניצול לרעה של קרן פדיון הפטנטים</strong> (רישום פטנטים חסרי ערך וניפוח שימוש פיקטיבי)</td>
+        <td><strong>הצמדה למדדי בריאות קליניים (QALYs) והשתתפות עצמית של 20%:</strong> תמלוגים משולמים רק על תוצאות בריאותיות מאומתות בבתי חולים או כשרוכשים גנריים עצמאיים משלמים 20% מכיסם, מה שמוכיח תועלת אמיתית.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>גלגול מס הקרקע והאנרגיה על הצרכנים</strong></td>
+        <td><strong>חוק ההשפעה של ריקרדו + החזר דיבידנד לאזרח:</strong> כלכלית, מס ערך קרקע אינו ניתן לגלגול על שוכרים כי היצע הקרקע קשיח לחלוטין (100% נופל על מחיר הקרקע). במס האנרגיה, מלוא המרווח הדפלציוני מוחזר לאזרחים בדיבידנד החודשי.</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><strong>הצפת בתי המשפט בתביעות Qui Tam קנטרניות</strong></td>
+        <td><strong>כלל ההוצאות האנגלי על תביעות בחוסר תום לב:</strong> תובע בתום לב פטור מאגרה, אך תביעה שחבר המושבעים קובע כי פובריקה בזדון גוררת חילוט ערבות הגשה לכיסוי הוצאות הנתבע.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2 id="s12"><span class="num">12.</span> השוואה ראש בראש: תערו של אוקהם מול ארכיטקטורת v5.0 המלאה</h2>
+  <table class="arch-table">
+    <thead>
+      <tr>
+        <th>ממד</th>
+        <th>מערכת תערו של אוקהם (מסמך זה)</th>
+        <th>ארכיטקטורת v5.0 המלאה (<a href="Post_Scarcity_v5_he.html">הספר הלבן</a>)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>מטבע ומחירים</strong></td>
+        <td>שומר על המטבע הקיים (שקל/דולר/אירו) + מחירי שוק רגילים</td>
+        <td>מטבע Credit צמוד-סל + זירת מסחר בעלות שולית + מפסק מחירים 3&sigma;</td>
+      </tr>
+      <tr>
+        <td><strong>הכנסת בסיס (UBA)</strong></td>
+        <td>דיבידנד פריון מהבנק המרכזי + תרמוסטט שריפת מס קרקע/אקסרגיה</td>
+        <td>הנפקת UBA מבוססת-פריון + שריפת 100% עודף/משאבים (PVEL) + דמיורג' 2.5%</td>
+      </tr>
+      <tr>
+        <td><strong>מו"פ וחדשנות</strong></td>
+        <td>סטארט-אפים וקרנות פרטיות + קרן פדיון פטנטים אוטומטית לנחלת הכלל</td>
+        <td>הגרלה פתוחה קריפטוגרפית רב-שכבתית + פתח מילוט של קואופרטיבים</td>
+      </tr>
+      <tr>
+        <td><strong>בעלות על מפעלים</strong></td>
+        <td>עסקים פרטיים (&lt;50M$); קרנות תעשייתיות דניות (&gt;50M$) עם יחס שכר 15:1</td>
+        <td>100% ארגוני ביצוע ללא מטרות רווח + בתי יוצר משותפים + חכירות הרברגר</td>
+      </tr>
+      <tr>
+        <td><strong>התיישנות ופרסום</strong></td>
+        <td>אחריות יצרן חוקית ל-10 שנים + מס פיגוביאני של 100% על פרסום</td>
+        <td>זירת מסחר עובדתית בלבד + מדדי עמידות</td>
+      </tr>
+      <tr>
+        <td><strong>מערכת חיסון משחיתות</strong></td>
+        <td>תגמולי <em>Qui Tam</em> של 30% + חבר מושבעים אזרחי אקראי של 12 איש</td>
+        <td>ביקורת מבוזרת בערבות על הבלוקצ'יין + מושבעי VRF + פרס חנינה לקרטלים</td>
+      </tr>
+      <tr>
+        <td><strong>אופק יישום</strong></td>
+        <td><strong>שנה עד 3 שנים</strong> (5 חוקים פרלמנטריים רגילים; אפס טכנולוגיה חדשה)</td>
+        <td><strong>5 עד 30 שנים</strong> (ארכיפלג אזורים כלכליים מיוחדים + פרוטוקול מלא)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="s13"><span class="num">13.</span> חמש הצעות החוק ליום הראשון (ניתנות לחקיקה בכל סדר)</h2>
+  <ol>
+    <li><strong>חוק 1 (חוק פדיון תרופות וחדשנות פתוחה):</strong> מקים את קרן פדיון הפטנטים ב-0.5% תמ"ג. כל תרופה חיונית וטכנולוגיית אקלים מאושרת נפדית לנחלת הכלל עם תמלוגי אימפקט ל-5 שנים, ומפילה את מחירי התרופות ב-80%+ כבר בחודש הראשון.</li>
+    <li><strong>חוק 2 (חוק אחריות ל-10 שנים ומיסוי פרסום):</strong> מחייב אחריות תיקון/החלפה ל-10 שנים ושרטוטים פתוחים למכשירים בני-קיימא, מבטל את ניכוי המס על פרסום ומטיל מס של 100% על תקציבי פרסום מעל 100 אלף דולר.</li>
+    <li><strong>חוק 3 (חוק Qui Tam אוניברסלי ומושבעים אזרחיים):</strong> מעניק לכל אזרח ושותפות ביקורת פרטית זכות תביעה בגין הונאה אקולוגית, תיאום מחירים והפרת אחריות בפני 12 מושבעים אקראיים תמורת 30% מהקנסות המשולשים.</li>
+    <li><strong>חוק 4 (חוק בעלות נאמנותית ויחס שכר 15:1):</strong> מעניק פטור ממס חברות לתאגידים שמאמצים בעלות קרן נאמנותית דנית עם יחס שכר 15:1, ומחייב המרה (עם פדיון מייסדים של פי 5–10) לחברות החוצות מחזור של 50 מיליון דולר.</li>
+    <li><strong>חוק 5 (חוק דיבידנד הפריון הריבוני ומס ערך קרקע):</strong> מחליף את מסי השכר על עובדים במס ערך קרקע של 4% ומס אקסרגיה במקור (המשמשים כתנור שריפה נגד אינפלציה), ומנחה את הבנק המרכזי להנפיק את כל צמיחת הכסף הלא-אינפלציונית ישירות לחשבונות הדיבידנד החודשי של האזרחים.</li>
+  </ol>
+
+  <h2 id="s14"><span class="num">14.</span> סיכום: לא יריבים, אלא שלב א׳ ושלב ב׳ של אותה דרך</h2>
+  <p>
+    מערכת תערו של אוקהם והארכיטקטורה המלאה של <em>פרדוקס השפע (v5.0)</em> אינן אידיאולוגיות מתחרות. הן <strong>שלב א׳ (השדרוג הכירורגי המהיר של מדינת לאום קיימת)</strong> ו<strong>שלב ב׳ (מערכת ההפעלה הטבעית של עידן הפוסט-מחסור)</strong>. ברגע שחברה חיה בתוך חמשת החוקים הללו במשך עשור, המרחק הנותר אל ארכיטקטורת v5.0 המלאה כבר אינו קפיצה מעל תהום, אלא עדכון תוכנה טבעי.
+  </p>
+
+  <div class="principle">
+    <div class="label">עקרון תערו של אוקהם</div>
+    אל תבטלו את השוק במקום שבו השוק באמת מתחרה. בטלו את חמשת המונופולים שהמדינה אוכפת (הנפקת כסף-חוב בנקאי, נעילת פטנטים, מניות סחירות לנצח, פרסום מסובסד במס ורגולטורים שבויים) שמונעים מהשוק לספק שפע.
+  </div>
+
+  <hr>
+
+  <h2 id="changelog"><span class="num">15.</span> היסטוריית גרסאות ויומן שינויים מובנה</h2>
+  <table class="arch-table">
+    <thead>
+      <tr>
+        <th>גרסה</th>
+        <th>תאריך</th>
+        <th>היקף ליבה ותוספות ארכיטקטוניות</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>v5.0 + מהדורת תערו של אוקהם</strong></td>
+        <td>אוקטובר 2026</td>
+        <td>השלמת מפרט הלולאה הסגורה (Mint-First UBA + PVEL Burn Sink, 10 סגירות תפעוליות למשק הבית, הוכחת איסור מניות וריבית, דיור ותחזוקה ברוב 51%, הגנת פנסיות 1:1) והוספת מסמך המשלים <em>תערו של אוקהם</em> באנגלית, עברית ורוסית (5 חוקים כירורגיים להשגת 90% מתוצאות הפוסט-מחסור בתוך הקפיטליזם הקיים).</td>
+      </tr>
+      <tr>
+        <td><strong>v4.0</strong></td>
+        <td>יולי 2026</td>
+        <td>סבב הקשחה יריבית (קנוניית מבקרים, קרטל אישורים, מענה בן 7 נקודות להתנגדות הכפייה, חסימה לאחר 3 נטישות).</td>
+      </tr>
+      <tr>
+        <td><strong>v1.0 &ndash; v3.4</strong></td>
+        <td>ינואר&ndash;יוני 2026</td>
+        <td>ניסוח פרדוקס המחסור, שרשרת הדומינו, ההפרדה התלת-שכבתית, ההגרלה הפתוחה, ביקורת מבוזרת, 13 בעיות מבניות, 8 אילוצים נוירולוגיים והקצאת הבסיס האוניברסלית (UBA).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="footnote">
+    חלק מסדרת המחקר <em>פרדוקס השפע</em>. קראו את המפרט המלא ב-<a href="Post_Scarcity_v5_he.html">פרדוקס השפע (v5.0 בעברית)</a>, את מפרט החוזים החכמים ב-<a href="Post_Scarcity_DeFi_Protocol.html">פרוטוקול השפע (v2.0)</a>, או את <a href="themarker_article_he.html">כתבת העומק והמדריך למשק הבית</a>.
+  </p>
+
+</div>
+
+<script>
+(function() {
+  const links = document.querySelectorAll('.sidebar a');
+  const sections = [];
+  links.forEach(a => {
+    const id = a.getAttribute('href')?.slice(1);
+    if (id) {
+      const el = document.getElementById(id);
+      if (el) sections.push({ el, a });
+    }
+  });
+  function update() {
+    let current = sections[0];
+    const scrollY = window.scrollY + 120;
+    for (const s of sections) {
+      if (s.el.offsetTop <= scrollY) current = s;
+    }
+    links.forEach(a => a.classList.remove('active'));
+    if (current) current.a.classList.add('active');
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
+
+</body>
+</html>

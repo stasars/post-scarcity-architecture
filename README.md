@@ -11,9 +11,10 @@ This repository is published with [GitHub Pages](https://pages.github.com/). The
 | `index.html` / `Post_Scarcity_v5.html` | **The Abundance Paradox (v5.0, English):** Full 37-section closed-loop economic architecture | [Open](https://stasars.github.io/post-scarcity-architecture/) |
 | `Post_Scarcity_v5_he.html` | **פרדוקס השפע (v5.0, Hebrew):** מהדורת לולאה סגורה מלאה (37 פרקים) | [Open](https://stasars.github.io/post-scarcity-architecture/Post_Scarcity_v5_he.html) |
 | `Post_Scarcity_v5_ru.html` | **Парадокс изобилия (v5.0, Russian):** Издание с замкнутым контуром (37 разделов) | [Open](https://stasars.github.io/post-scarcity-architecture/Post_Scarcity_v5_ru.html) |
-| `Post_Scarcity_Occams_Razor.html` | **The Occam's Razor Abundance System:** Achieving 90% of post-scarcity outcomes through 5 surgical statutory modifications inside existing capitalism | [Open](https://stasars.github.io/post-scarcity-architecture/Post_Scarcity_Occams_Razor.html) |
-| `Post_Scarcity_DeFi_Protocol.html` | **The Abundance Protocol (v2.0):** On-chain smart-contract specification synchronized with v5.0 | [Open](https://stasars.github.io/post-scarcity-architecture/Post_Scarcity_DeFi_Protocol.html) |
-| `CHANGELOG.md` | **Version History & Changelog:** Detailed engineering evolution from v1.0 through v5.0 | [Open](https://stasars.github.io/post-scarcity-architecture/CHANGELOG.md) |
+| `Post_Scarcity_Occams_Razor.html` | **The Occam's Razor Abundance System (EN):** Achieving 90% of post-scarcity outcomes through 5 surgical statutory modifications inside existing capitalism | [Open](https://stasars.github.io/post-scarcity-architecture/Post_Scarcity_Occams_Razor.html) |
+| `Post_Scarcity_Occams_Razor_he.html` | **מערכת השפע לפי תערו של אוקהם (HE):** חמש התערבויות כירורגיות בתוך הקפיטליזם הקיים | [Open](https://stasars.github.io/post-scarcity-architecture/Post_Scarcity_Occams_Razor_he.html) |
+| `Post_Scarcity_Occams_Razor_ru.html` | **Система изобилия по бритве Оккама (RU):** Пять точечных реформ внутри существующего капитализма | [Open](https://stasars.github.io/post-scarcity-architecture/Post_Scarcity_Occams_Razor_ru.html) |
+| `Post_Scarcity_DeFi_Protocol.html` | **The Abundance Protocol (v2.0):** On-chain smart-contract specification synchronized with v5.0 (includes inline `#changelog`) | [Open](https://stasars.github.io/post-scarcity-architecture/Post_Scarcity_DeFi_Protocol.html) |
 
 ## Household Practical Guides & Summaries
 
