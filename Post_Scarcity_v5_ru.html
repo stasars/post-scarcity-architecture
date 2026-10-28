@@ -513,9 +513,44 @@
       color: var(--ink-light);
     }
 
+    /* ── Top Suite Bar ── */
+    .suite-nav {
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule-light);
+      padding: 10px 24px;
+      margin-left: var(--sidebar-w);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12.5px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 16px;
+      align-items: center;
+    }
+    .suite-nav .suite-label {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-faint);
+      font-size: 11px;
+      margin-right: 4px;
+    }
+    .suite-nav a {
+      color: var(--ink-light);
+      text-decoration: none;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border-bottom: none;
+    }
+    .suite-nav a:hover { background: var(--cream); color: var(--accent); }
+    .suite-nav a.current {
+      background: var(--accent-bg);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
     /* ── Print ── */
     @media print {
-      .sidebar { display: none; }
+      .sidebar, .suite-nav { display: none; }
       .main { margin-left: 0; max-width: 100%; padding: 24px; }
       body { font-size: 11pt; background: white; }
       .principle, .definition, .limit, .proof, .problem-card, .neuro, .adaptation, .residual { break-inside: avoid; }
@@ -528,6 +563,7 @@
     @media (max-width: 960px) {
       .sidebar { transform: translateX(-100%); }
       .sidebar.open { transform: translateX(0); box-shadow: 4px 0 20px rgba(0,0,0,0.1); }
+      .suite-nav { margin-left: 0; padding-left: 110px; }
       .main { margin-left: 0; padding: 32px 24px 80px; }
       .title-block { padding: 20px; }
       .title-block h1 { font-size: 2rem; }
@@ -538,6 +574,16 @@
 <body>
 
 <button class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">&#9776; Содержание</button>
+
+<!-- ════════════════════════════════════════════ SUITE NAV ════════════════════════════════════════════ -->
+<div class="suite-nav">
+  <span class="suite-label">Серия работ:</span>
+  <a href="Post_Scarcity_v5_ru.html" class="current">Основная работа (v5.0)</a>
+  <a href="Post_Scarcity_Occams_Razor.html">Версия «Бритва Оккама» (EN)</a>
+  <a href="Post_Scarcity_DeFi_Protocol.html">Ончейн-протокол (v2.0)</a>
+  <a href="themarker_article_ru.html">Практический гид (RU)</a>
+  <a href="CHANGELOG.md">История изменений</a>
+</div>
 
 <!-- ════════════════════════════════════════════ SIDEBAR ════════════════════════════════════════════ -->
 <nav class="sidebar" id="sidebar">

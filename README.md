@@ -1,32 +1,43 @@
-# The Abundance Paradox — Post-Scarcity Economic Architecture
+# The Abundance Paradox: Post-Scarcity Economic Architecture (v5.0 Suite)
 
-This repository is published with [GitHub Pages](https://pages.github.com/). The
-live site is available at:
+This repository is published with [GitHub Pages](https://pages.github.com/). The live site is available at:
 
 **https://stuk88.github.io/post-scarcity-architecture/**
 
-## Pages
+## Core Architecture Suite (v5.0 Closed-Loop Edition)
 
-| Page | Description | Live link |
+| Document | Description | Live Link |
 | --- | --- | --- |
-| `index.html` | The Abundance Paradox — A Post-Scarcity Economic Architecture (main document, English) | [open](https://stuk88.github.io/post-scarcity-architecture/) |
-| `Post_Scarcity_v3.html` | Redirects to `index.html` (kept for backward-compatible links) | [open](https://stuk88.github.io/post-scarcity-architecture/Post_Scarcity_v3.html) |
-| `Post_Scarcity_v3_he.html` | פרדוקס השפע — ארכיטקטורה כלכלית לעידן שלאחר-המחסור (Hebrew) | [open](https://stuk88.github.io/post-scarcity-architecture/Post_Scarcity_v3_he.html) |
-| `Post_Scarcity_v3_ru.html` | Парадокс изобилия — Экономическая архитектура постдефицитного общества (Russian) | [open](https://stuk88.github.io/post-scarcity-architecture/Post_Scarcity_v3_ru.html) |
-| `Post_Scarcity_DeFi_Protocol.html` | The Abundance Protocol: An On-Chain Implementation of the Post-Scarcity Architecture | [open](https://stuk88.github.io/post-scarcity-architecture/Post_Scarcity_DeFi_Protocol.html) |
-| `pitch.html` | The Abundance Paradox — Summary | [open](https://stuk88.github.io/post-scarcity-architecture/pitch.html) |
-| `Post_Scarcity_Pitch.html` | The Abundance Paradox — Summary | [open](https://stuk88.github.io/post-scarcity-architecture/Post_Scarcity_Pitch.html) |
+| `index.html` / `Post_Scarcity_v5.html` | **The Abundance Paradox (v5.0, English):** Full 37-section closed-loop economic architecture | [Open](https://stuk88.github.io/post-scarcity-architecture/) |
+| `Post_Scarcity_v5_he.html` | **פרדוקס השפע (v5.0, Hebrew):** מהדורת לולאה סגורה מלאה (37 פרקים) | [Open](https://stuk88.github.io/post-scarcity-architecture/Post_Scarcity_v5_he.html) |
+| `Post_Scarcity_v5_ru.html` | **Парадокс изобилия (v5.0, Russian):** Издание с замкнутым контуром (37 разделов) | [Open](https://stuk88.github.io/post-scarcity-architecture/Post_Scarcity_v5_ru.html) |
+| `Post_Scarcity_Occams_Razor.html` | **The Occam's Razor Abundance System:** Achieving 90% of post-scarcity outcomes through 5 surgical statutory modifications inside existing capitalism | [Open](https://stuk88.github.io/post-scarcity-architecture/Post_Scarcity_Occams_Razor.html) |
+| `Post_Scarcity_DeFi_Protocol.html` | **The Abundance Protocol (v2.0):** On-chain smart-contract specification synchronized with v5.0 | [Open](https://stuk88.github.io/post-scarcity-architecture/Post_Scarcity_DeFi_Protocol.html) |
+| `CHANGELOG.md` | **Version History & Changelog:** Detailed engineering evolution from v1.0 through v5.0 | [Open](https://stuk88.github.io/post-scarcity-architecture/CHANGELOG.md) |
 
-## Other contents
+## Household Practical Guides & Summaries
 
-- `ru_tts_translation/` — Russian text-to-speech audiobook tooling: notebooks
-  (`F5_TTS_Russian_Audiobook.ipynb`, `OpenVoice_Voice_Conversion.ipynb`), a
-  reference audio sample (`ref_audio.wav`), and per-chapter source texts in
-  `chapter_texts/`.
+| Document | Description | Live Link |
+| --- | --- | --- |
+| `themarker_article_en.html` | **Household Practical Guide & Article (English):** How the Credit, UBA, housing, pensions, and services work in daily life | [Open](https://stuk88.github.io/post-scarcity-architecture/themarker_article_en.html) |
+| `themarker_article_he.html` | **מדריך מעשי למשק הבית ומאמר (Hebrew)** | [Open](https://stuk88.github.io/post-scarcity-architecture/themarker_article_he.html) |
+| `themarker_article_ru.html` | **Практический гид для домохозяйств и статья (Russian)** | [Open](https://stuk88.github.io/post-scarcity-architecture/themarker_article_ru.html) |
+| `pitch.html` / `Post_Scarcity_Pitch.html` | **1,000-Word Executive Summary / Forum Pitch** | [Open](https://stuk88.github.io/post-scarcity-architecture/pitch.html) |
+
+## Historical Archive (v3 / v4)
+
+| Document | Description |
+| --- | --- |
+| `Post_Scarcity_v3.html` | Redirects to `index.html` for backward compatibility |
+| `Post_Scarcity_v3_he.html` | Historical v4.0 Hebrew edition |
+| `Post_Scarcity_v3_ru.html` | Historical v4.0 Russian edition |
+
+## Other Contents
+
+- `abundance-protocol/`: Foundry Solidity implementation and test suite for The Abundance Protocol.
+- `design-log/`: Architectural design logs.
+- `ru_tts_translation/`: Russian text-to-speech audiobook tooling and per-chapter source texts.
 
 ## Deployment
 
-The site is served directly from the `main` branch root by GitHub Pages
-(Settings → Pages → "Deploy from a branch", `main` / `/`). Every push to `main`
-republishes the repository root as-is; no GitHub Actions workflow is involved.
-The `.nojekyll` file disables Jekyll processing so files are served verbatim.
+The site is served directly from the `main` branch root by GitHub Pages (`main` / `/`). The `.nojekyll` file disables Jekyll processing so files are served verbatim.
