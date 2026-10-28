@@ -781,8 +781,8 @@
   </div>
 
   <div class="residual">
-    <div class="residual-label">Second-Order Closure: PID Fiscal Conservation, 2.5% Demurrage &amp; Dual-Circuit FX Buffer</div>
-    Peg stability is enforced mechanically without custodial USD collateral through three closed-loop mechanisms (<em>Paradox</em> &sect;10.2): (1) a <strong>PID Fiscal Conservation Controller</strong> in the Treasury contract that bounds total quarterly Credit issuance (UBA + Raffle + Bounties) to total PVEL burn plus net export surplus, automatically trimming discretionary high-tier Raffle issuance and nudging the PVEL rate within constitutional bounds if burn ever lags issuance; (2) a <strong>2.5% annual Silvio Gesell demurrage rate</strong> on idle Credit balances above twice the annual basket, maintaining velocity; and (3) an <strong>Export FX Buffer Pool</strong> fed by the zone&rsquo;s zero-IP exports that clears essential Tier-1 imports at par while applying an automatic FX congestion surcharge to Tier-2 luxury imports.
+    <div class="residual-label">Second-Order Closure: Mint-First Productivity Dividend &amp; Burn-Sink Thermostat</div>
+    Peg stability is enforced mechanically without custodial USD collateral through the <strong>Mint-and-Burn Master Thermostat</strong> (<em>Paradox</em> &sect;10.2): <em>M<sub>issued</sub>(t) = B<sub>SurplusSweep</sub>(t) + B<sub>ResourceUsage</sub>(t) + B<sub>Demurrage</sub>(t) + &Delta;Y<sub>RealProductivity</sub>(t) &minus; &gamma; &middot; &pi;<sub>basket</sub>(t)</em>. The Treasury mints UBA and Raffle Credits directly from real productivity expansion (the Reverse-Cantillon Dividend) without waiting for tax revenue, while enterprise PVEL charges, resource quota auctions, and a <strong>2.5% annual Silvio Gesell demurrage rate</strong> act as pure burn sinks that permanently delete excess Credits from circulation to hold basket inflation at <em>0.0%</em>. External imports clear through the <strong>Export FX Buffer Pool</strong> (Tier-1 essential inputs at par; Tier-2 luxury imports subject to a dynamic FX congestion burn).
   </div>
 
   <h2 id="s6"><span class="num">6.</span> Proof of Personhood: Open-Source Multi-Modal Stack</h2>
@@ -816,35 +816,34 @@ interface IPersonhood {
     Because every verified identity requires attestation from at least <strong>two of the three orthogonal open-source modalities</strong> (for example, ZK-Passport nullifier + Guild Hall Encointer ceremony, or Proof-of-Humanity video vouching + BrightID social graph) and remains permanently open to bonded <code>challengeDuplicate()</code> bounties, compromising any single provider cannot mint a single fake UBA stream or raffle entry. If a modality exhibits statistical drift, the Metric Layer rotates its weight without disrupting existing multi-attested residents.
   </div>
 
-  <h2 id="s7"><span class="num">7.</span> The Protocol Value-Added and Exergy Levy (PVEL)</h2>
+  <h2 id="s7"><span class="num">7.</span> The Protocol Value-Added and Exergy Levy (PVEL) as a Burn Sink</h2>
   <p>
-    The architecture funds itself with a <strong>Protocol Value-Added and Exergy Levy (PVEL)</strong> assessed at the
-    settlement and physical infrastructure level (<em>Paradox</em> &sect;10.1).
+    Because the protocol mints UBA and Raffle Credits directly to match real productive capacity, the <strong>Protocol Value-Added and Exergy Levy (PVEL)</strong> operates not as revenue collection, but as a <strong>pure monetary and physical burn sink</strong> (<em>Paradox</em> &sect;10.1). Decoupling UBA minting from resource-tax revenue eliminates the Sin-Tax Paradox: when companies engineer products that consume 50% less electricity and raw minerals, their resource payments drop while real productivity rises, expanding the UBA mint rate.
   </p>
   <p>
-    <strong>Part A: Automated Net Value-Added Sweep (On-Chain Settlement).</strong> Every registered organisation sells its output and pays its suppliers and workers through transparent protocol accounts. The contract automatically sweeps 100% of Net Surplus above verified capped human compensation, verified intermediate inputs, and authorised working-capital depreciation directly into the Treasury.
+    <strong>Sink A: Automated Net Value-Added Burn (On-Chain Settlement).</strong> Every registered organisation sells its output and pays its suppliers and workers through transparent protocol accounts. The contract automatically sweeps and <strong>burns</strong> 100% of Net Surplus above verified capped human compensation, verified intermediate inputs, and authorised working-capital depreciation at settlement.
   </p>
   <p>
-    <strong>Part B: Upstream Exergy and Compute Royalty (Physical Bottlenecks).</strong> To prevent off-chain under-reporting by physical factories, a flat infrastructural royalty is collected directly at the grid meter (megawatt-hours drawn), industrial compute cluster (petaFLOP-hours), and raw mineral/land quota auction (<em>Paradox</em> &sect;34.9).
+    <strong>Sink B: Upstream Exergy, Compute, and Resource Quota Burn (Physical Bottlenecks).</strong> To price physical scarcity and prevent off-chain under-reporting by factories, an infrastructural royalty and uniform-price quota auction is collected and <strong>burned</strong> directly at the grid meter (megawatt-hours drawn), industrial compute cluster (petaFLOP-hours), and raw mineral/land quota auction (<em>Paradox</em> &sect;34.9).
   </p>
 
   <table class="arch-table">
     <tr>
-      <th>PVEL Component</th>
+      <th>PVEL Burn Sink</th>
       <th>How measured</th>
-      <th>Levy mechanism</th>
+      <th>Burn mechanism</th>
       <th>Enforcement</th>
     </tr>
     <tr>
-      <td>Part A: Net Value-Added</td>
+      <td>Sink A: Net Value-Added</td>
       <td>On-chain e-marketplace revenue minus capped payroll &amp; inputs</td>
-      <td>Automatic 100% surplus sweep at settlement</td>
+      <td>Automatic 100% surplus burn at settlement</td>
       <td>Cryptographic, automatic</td>
     </tr>
     <tr>
-      <td>Part B: Upstream Exergy / Compute</td>
+      <td>Sink B: Upstream Exergy / Resource Quotas</td>
       <td>Smart-grid MWh meters, compute cluster logs &amp; quota auctions</td>
-      <td>Per-unit exergy royalty at bottleneck source</td>
+      <td>Per-unit exergy &amp; quota burn at bottleneck source</td>
       <td>Hardware-attested meter + auditing bounties</td>
     </tr>
   </table>
