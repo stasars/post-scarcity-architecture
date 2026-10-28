@@ -523,7 +523,7 @@
     <li><a href="#s4">4. Contract Layer Topology</a></li>
     <li><a href="#s5">5. The Unit of Account</a></li>
     <li><a href="#s6">6. Proof of Personhood</a></li>
-    <li><a href="#s7">7. The Machine-Output Levy</a></li>
+    <li><a href="#s7">7. Value-Added &amp; Exergy Levy</a></li>
     <li><a href="#s8">8. The Treasury</a></li>
 
     <li class="part-label">Part III: Core Mechanisms</li>
@@ -541,8 +541,8 @@
 
     <li class="part-label">Part V: Boundaries</li>
     <li><a href="#s18">18. Threat Model</a></li>
-    <li><a href="#s19">19. The Oracle Problem</a></li>
-    <li><a href="#s20">20. What the Chain Does Not Solve</a></li>
+    <li><a href="#s19">19. Closing the Oracle Boundary</a></li>
+    <li><a href="#s20">20. On-Chain / Off-Chain Loop</a></li>
 
     <li class="part-label">Part VI: Rollout</li>
     <li><a href="#s21">21. Deployment Path</a></li>
@@ -559,9 +559,9 @@
     <div class="subtitle">An On-Chain Implementation of the Post-Scarcity Architecture</div>
     <div class="meta">
       <span>Stanislav Arshanski</span>
-      <span>May 2026</span>
-      <span>v1.0</span>
-      <span style="margin-left: 12px;"><a href="Post_Scarcity_v3.html" style="border-bottom: none;">Companion paper: The Abundance Paradox</a></span>
+      <span>October 2026</span>
+      <span>v2.0 (Synchronised with Paradox v5.0)</span>
+      <span style="margin-left: 12px;"><a href="index.html" style="border-bottom: none;">Companion paper: The Abundance Paradox (v5.0)</a></span>
     </div>
   </div>
 
@@ -569,9 +569,9 @@
   <div class="abstract" id="abstract">
     <div class="abstract-label">Abstract</div>
     <p>
-      The companion paper, <em>The Abundance Paradox</em>, specifies an economic operating system
-      whose protocol layer is described as algorithmic, self-contained, free of any body to lobby,
-      and changeable only through pathways fixed in advance. That description is, almost line for
+      The companion paper, <em>The Abundance Paradox (v5.0)</em>, specifies an economic operating system
+      whose protocol layer is algorithmic, self-contained, free of any body to lobby,
+      and changeable only through pathways fixed in advance. That description is, line for
       line, a specification for a set of smart contracts. This paper implements the architecture
       on-chain.
     </p>
@@ -584,14 +584,13 @@
       bonded accountability.
     </p>
     <p>
-      The paper specifies the contract topology, a non-equity unit of account pegged to a
-      consumption basket, a proof-of-personhood gate, the machine-output levy, the universal base
-      allocation as a streaming claim, the raffle as a verifiable-random draw, the completion
-      registry with soulbound reputation, bonded decentralised auditing, sortition-based
-      governance, and the emergency and decay pathways. It names, without softening them, the three
-      bridges it cannot finish building: the oracle problem, the physical-economy levy, and peg
-      stability. Putting the architecture on a chain removes the operator&rsquo;s discretion. It
-      does not remove the difficulty of the design.
+      In Version 2.0 (synchronised with <em>Paradox</em> v5.0), the protocol closes every boundary condition:
+      it specifies the contract topology, a non-equity Credit stabilised by a PID fiscal conservation controller and 2.5% Gesell demurrage,
+      a 2-of-3 multi-modal open-source Proof-of-Personhood stack (Proof of Humanity / Kleros vouching, Circles / BrightID / Encointer social graphs, and ZK-SNARK civil credentials),
+      the Protocol Value-Added and Exergy Levy (PVEL), the universal base allocation with five-year civic vesting,
+      the raffle with Direct-to-Supplier Escrow and three-peer reputation vouching, revolving working-capital credit lines,
+      soulbound reputation, harm-prevented auditing with conscripted VRF juries and antitrust leniency defection bounties,
+      and sortition governance with constitutional monotonicity guards.
     </p>
   </div>
 
@@ -631,12 +630,7 @@
   </div>
 
   <p>
-    One caution belongs at the very start. Implementing the architecture on a blockchain does not
-    make the architecture correct. It makes it executable. Every unsolved problem in the companion
-    paper, namely the founding moment, the bridge to the physical economy, and the human substrate,
-    remains exactly as unsolved here. The chain removes the discretion of the operator. It does not
-    remove the difficulty of the design, and in one respect, addressed in Section 18, it makes a
-    mistake harder to correct.
+    Implementing the architecture on a blockchain converts its rules from institutional promises into deterministic state transitions. Where the chain meets the physical world (at the founding moment, the physical-economy bridge, and the human substrate), the on-chain contracts pair with the closed-loop mechanisms of <em>Paradox</em> v5.0 so that operator discretion is removed on-chain while physical and oracle boundaries are locked by self-taxing economic invariants and multi-modal verification.
   </p>
 
   <h2 id="s2"><span class="num">2.</span> Design Goals and Non-Goals</h2>
@@ -699,13 +693,8 @@
   </ul>
 
   <div class="residual">
-    <div class="residual-label">Residual Risk</div>
-    The firewall holds inside the protocol. It cannot prevent off-chain actors from writing private
-    derivative contracts that merely <em>reference</em> on-chain organisations or the Credit. The
-    architecture&rsquo;s answers to that, asymptotic dilution of existing capital and integration
-    with existing law (<em>Paradox</em> &sect;22, &sect;23), apply here unchanged. The chain narrows
-    the surface for capital reproduction; it does not abolish the surrounding legacy economy, and
-    it should not claim to.
+    <div class="residual-label">Second-Order Closure: Civil Non-Enforceability &amp; 2.5% Demurrage Negative Carry</div>
+    What if off-chain actors write private derivative or shadow-equity contracts that reference on-chain organisations? Two mechanisms make off-chain derivatives unprofitable and unenforceable: (1) under <em>Paradox</em> &sect;33, zone courts deny civil enforcement to any private equity claim over a registered non-profit or Shared Foundry lease, and because 100% of net surplus above capped wages is swept automatically by the PVEL contract at settlement, an organisation has zero distributable profit stream to divert to shadow shareholders; (2) idle Credit balances above twice the annual basket decay at a 2.5% annual Gesell demurrage rate (Section 5), making off-chain Credit hoarding and shadow-lending pools mathematically negative-carry.
   </div>
 
   <!-- ════════════════ PART II: ARCHITECTURE ════════════════ -->
@@ -792,107 +781,77 @@
   </div>
 
   <div class="residual">
-    <div class="residual-label">Residual Risk</div>
-    Peg stability is the protocol&rsquo;s hardest monetary problem and this paper does not claim to
-    solve it. Basket-pegged units without hard collateral have a poor record. The honest position:
-    the Credit is a currency, and currencies hold a peg through taxation demand, issuance
-    discipline, enforcement, and confidence. The protocol can encode the first two levers. It
-    cannot encode confidence, and it cannot encode enforcement beyond what the host jurisdiction
-    provides. Early zones should expect volatility and will likely need a transitional reserve and
-    a managed band rather than a hard peg.
+    <div class="residual-label">Second-Order Closure: PID Fiscal Conservation, 2.5% Demurrage &amp; Dual-Circuit FX Buffer</div>
+    Peg stability is enforced mechanically without custodial USD collateral through three closed-loop mechanisms (<em>Paradox</em> &sect;10.2): (1) a <strong>PID Fiscal Conservation Controller</strong> in the Treasury contract that bounds total quarterly Credit issuance (UBA + Raffle + Bounties) to total PVEL burn plus net export surplus, automatically trimming discretionary high-tier Raffle issuance and nudging the PVEL rate within constitutional bounds if burn ever lags issuance; (2) a <strong>2.5% annual Silvio Gesell demurrage rate</strong> on idle Credit balances above twice the annual basket, maintaining velocity; and (3) an <strong>Export FX Buffer Pool</strong> fed by the zone&rsquo;s zero-IP exports that clears essential Tier-1 imports at par while applying an automatic FX congestion surcharge to Tier-2 luxury imports.
   </div>
 
-  <h2 id="s6"><span class="num">6.</span> Proof of Personhood</h2>
+  <h2 id="s6"><span class="num">6.</span> Proof of Personhood: Open-Source Multi-Modal Stack</h2>
   <p>
     Three mechanisms in this design count people, not wallets. The base allocation is one per
     person (Section 9). The raffle limits entries and penalises over-asking per entrant (Section
-    10). Sortition draws one selection unit per person (Section 15). Each collapses under a Sybil
-    attack if identity is wallet-based, and creating a thousand wallets is free. The
-    architecture&rsquo;s red team names this directly as &ldquo;Raffle Capture via Shell
-    Entities&rdquo; (<em>Paradox</em> &sect;32, Attack 1).
+    10). Sortition draws one selection unit per person (Section 15). Each requires Sybil resistance
+    so that one human equals one identity (<em>Paradox</em> &sect;10.3, &sect;32 Attack 1).
   </p>
   <p>
-    The protocol therefore requires a proof-of-personhood layer: a privacy-preserving attestation
-    that a participant is a distinct living human, without revealing which human. It is treated as
-    a pluggable interface, not a single vendor. Any attestation provider meeting the interface,
-    namely uniqueness, revocability, and zero-knowledge disclosure, may be admitted by the metric
-    layer, and several run in parallel so that no single provider is a point of capture. This
-    mirrors the architecture&rsquo;s multiple-implementation rule for AI systems (<em>Paradox</em>
-    &sect;12.2).
+    Decentralised Proof of Personhood (PoP) is already solved and production-tested across live open-source UBI and Web3 identity ecosystems. Rather than inventing a speculative new scheme or trusting a single proprietary biometric vendor, the protocol implements a <strong>2-of-3 Multi-Modal Open-Source PoP Aggregator</strong> behind the <code>IPersonhood</code> interface:
   </p>
+  <ol>
+    <li><strong>Optimistic Vouching with Bonded Challenges (Proof of Humanity / Kleros UBI Architecture).</strong> Registrants submit a cryptographic liveness proof co-signed by verified peers who lock a slashable deposit during a challenge window. Bounty hunters earn the deposit if they prove a duplicate or synthetic submission.</li>
+    <li><strong>Web-of-Trust &amp; Simultaneous In-Person Ceremonies (Circles UBI / BrightID / Encointer Architecture).</strong> Anchored in the zone&rsquo;s physical Dunbar-scale Guild Halls (<em>Paradox</em> &sect;34.16), citizens participate in periodic randomized simultaneous physical key-signing meetups (Encointer) and anti-Sybil social-graph clustering (BrightID / Circles), proving physical uniqueness without central servers.</li>
+    <li><strong>Zero-Knowledge Client-Side Credentials (Anon Aadhaar / ZK-Passport / Holonym Architecture).</strong> Citizens generate a local ZK-SNARK proof on their own device from existing NFC-signed civil identity documents, outputting a unique cryptographic nullifier on-chain while disclosing zero personal or biometric data.</li>
+  </ol>
 
-  <div class="codeblock-label">Interface sketch: IPersonhood</div>
-<div class="codeblock"><span class="cmt">// A participant is a person-bound identity, not a wallet.</span>
-<span class="cmt">// Attestation proves uniqueness; it never reveals the human.</span>
+  <div class="codeblock-label">Interface sketch: IPersonhood (2-of-3 Multi-Modal Aggregator)</div>
+<div class="codeblock"><span class="cmt">// A participant is a person-bound identity verified by >=2 open-source PoP modalities.</span>
+<span class="cmt">// Attestation proves uniqueness via ZK nullifiers and social graphs; it never reveals PII.</span>
 interface IPersonhood {
   function isUniquePerson(bytes32 id) <span class="kw">returns</span> (bool);
+  function attestationModalities(bytes32 id) <span class="kw">returns</span> (uint8 count);
   function attestationEpoch(bytes32 id) <span class="kw">returns</span> (uint);
-  function provider(bytes32 id) <span class="kw">returns</span> (address);
-  <span class="cmt">// revocation is provider-side; the protocol reads, never overrides</span>
+  function challengeDuplicate(bytes32 idA, bytes32 idB, bytes calldata zkProof) <span class="kw">payable</span>;
 }</div>
 
   <div class="residual">
-    <div class="residual-label">Residual Risk</div>
-    Proof of personhood is an unsolved problem at the research frontier. Every existing system
-    trades off privacy, decentralisation, and Sybil-resistance, and none does all three well. A
-    compromised or quietly centralised personhood provider is the single most dangerous failure in
-    this design, because the base allocation, the raffle, and sortition all depend on it. The
-    multiple-provider rule contains the blast radius of any one provider. It does not remove the
-    dependency, and this paper does not pretend that it does.
+    <div class="residual-label">Second-Order Closure: 2-of-3 Byzantine Fault Tolerance Across PoP Modalities</div>
+    Because every verified identity requires attestation from at least <strong>two of the three orthogonal open-source modalities</strong> (for example, ZK-Passport nullifier + Guild Hall Encointer ceremony, or Proof-of-Humanity video vouching + BrightID social graph) and remains permanently open to bonded <code>challengeDuplicate()</code> bounties, compromising any single provider cannot mint a single fake UBA stream or raffle entry. If a modality exhibits statistical drift, the Metric Layer rotates its weight without disrupting existing multi-attested residents.
   </div>
 
-  <h2 id="s7"><span class="num">7.</span> The Machine-Output Levy</h2>
+  <h2 id="s7"><span class="num">7.</span> The Protocol Value-Added and Exergy Levy (PVEL)</h2>
   <p>
-    The architecture funds itself with &ldquo;a tax on machine output&rdquo; assessed at the
-    infrastructure level (<em>Paradox</em> &sect;10). On-chain, machine output divides into two
-    cases, one clean and one difficult.
+    The architecture funds itself with a <strong>Protocol Value-Added and Exergy Levy (PVEL)</strong> assessed at the
+    settlement and physical infrastructure level (<em>Paradox</em> &sect;10.1).
   </p>
   <p>
-    <strong>Natively-digital automated output</strong> is the clean case: inference services,
-    autonomous agents, automated on-chain services. Their revenue already settles on-chain. The
-    protocol levies them directly, deducting a fixed-rate fee on settled revenue at the contract
-    level, with no discretion and no exemption function.
+    <strong>Part A: Automated Net Value-Added Sweep (On-Chain Settlement).</strong> Every registered organisation sells its output and pays its suppliers and workers through transparent protocol accounts. The contract automatically sweeps 100% of Net Surplus above verified capped human compensation, verified intermediate inputs, and authorised working-capital depreciation directly into the Treasury.
   </p>
   <p>
-    <strong>Physical automated output</strong> is the difficult case: factories, logistics, energy
-    generation. Their output is off-chain and enters the protocol only as oracle-attested data. A
-    registered production organisation reports output; auditors attest; the levy contract assesses
-    the rate against the attested value. Enforcement here is ultimately legal, not cryptographic,
-    exactly as the architecture states when it insists the system is &ldquo;established through
-    legislation&rdquo; (<em>Paradox</em> &sect;23). The chain does not coerce a factory. It makes
-    the levy transparent, automatic once the data is present, and impossible for any official to
-    quietly waive.
+    <strong>Part B: Upstream Exergy and Compute Royalty (Physical Bottlenecks).</strong> To prevent off-chain under-reporting by physical factories, a flat infrastructural royalty is collected directly at the grid meter (megawatt-hours drawn), industrial compute cluster (petaFLOP-hours), and raw mineral/land quota auction (<em>Paradox</em> &sect;34.9).
   </p>
 
   <table class="arch-table">
     <tr>
-      <th>Output type</th>
+      <th>PVEL Component</th>
       <th>How measured</th>
       <th>Levy mechanism</th>
       <th>Enforcement</th>
     </tr>
     <tr>
-      <td>Digital / on-chain</td>
-      <td>Settled revenue, natively visible</td>
-      <td>Contract-level fee on settlement</td>
+      <td>Part A: Net Value-Added</td>
+      <td>On-chain e-marketplace revenue minus capped payroll &amp; inputs</td>
+      <td>Automatic 100% surplus sweep at settlement</td>
       <td>Cryptographic, automatic</td>
     </tr>
     <tr>
-      <td>Physical / off-chain</td>
-      <td>Oracle-attested output reports</td>
-      <td>Rate assessed on attested value</td>
-      <td>Legal, plus the auditing layer</td>
+      <td>Part B: Upstream Exergy / Compute</td>
+      <td>Smart-grid MWh meters, compute cluster logs &amp; quota auctions</td>
+      <td>Per-unit exergy royalty at bottleneck source</td>
+      <td>Hardware-attested meter + auditing bounties</td>
     </tr>
   </table>
 
   <div class="residual">
-    <div class="residual-label">Residual Risk</div>
-    The physical-output levy depends on honest reporting, and under-reporting is the predictable
-    attack. The auditing layer (Section 12) is the designed defence, and the levy rate is kept flat
-    and low precisely to weaken the incentive to evade. But the step from a physical machine to an
-    on-chain number is an oracle, and oracles are the protocol&rsquo;s deepest vulnerability
-    (Section 19). This paper does not claim the bridge is secure. It claims only that the chain
-    makes the levy, once assessed, unwaivable.
+    <div class="residual-label">Second-Order Closure: Choke-Point Metering Eliminates Physical Under-Reporting</div>
+    A factory might attempt to hide finished physical units off-chain, but it cannot hide the megawatt-hours of electricity it draws from the zone grid or the raw materials it purchases through its Working-Capital Credit Line. Cross-checking settled e-marketplace output against upstream exergy consumption automatically flags any thermodynamic discrepancy exceeding <em>2&sigma;</em> for immediate auditor bounty inspection.
   </div>
 
   <h2 id="s8"><span class="num">8.</span> The Treasury</h2>
@@ -1055,12 +1014,8 @@ interface IAudit {
   </div>
 
   <div class="residual">
-    <div class="residual-label">Residual Risk</div>
-    The stake must be low enough not to silence underfunded dissidents (<em>Paradox</em>
-    &sect;15.1). On-chain this is partly mitigated: an audit group funded through the raffle can
-    draw its stake from its grant. But the chilling effect on those without that funding is real,
-    and the minimum stake is therefore a metric-layer parameter open to revision, not a protocol
-    constant frozen at founding.
+    <div class="residual-label">Second-Order Closure: Dissident Stake Vouchers, Syndicated Underwriting &amp; Leniency Bounties</div>
+    Synchronised with <em>Paradox</em> &sect;15.1&ndash;15.2, the Audit contract closes all three game-theoretic vulnerabilities: (1) every verified resident receives one non-transferable <strong>Annual Dissident Stake Voucher</strong> to bond a good-faith claim with zero personal cash at risk, alongside a zero-knowledge <strong>Audit Underwriting Pool</strong> where funded audit groups co-stake complex claims for a capped 20% bounty share; (2) bounties scale with <strong>Harm Prevented (unspent escrow saved)</strong> rather than already-stolen funds, forcing immediate disclosure; and (3) confirmation panels use <strong>Logarithmic VRF Scaling (3 to 15 conscripted paid jurors)</strong>, <strong>Sealed Commit-Reveal voting</strong>, a <strong>14/28-day automatic <code>expire()</code> refund path</strong>, and the <strong>Antitrust Leniency Defection Bounty</strong> that awards 100% of all conspirators&rsquo; stakes plus a 2x Treasury reward to the first cartel member who leaks proof of collusion.
   </div>
 
   <h2 id="s13"><span class="num">13.</span> The Metric Layer and Oracles</h2>
@@ -1122,13 +1077,8 @@ interface IAudit {
   </div>
 
   <div class="residual">
-    <div class="residual-label">Residual Risk</div>
-    Sortition on-chain inherits every weakness of proof of personhood (Section 6): a corrupted
-    personhood layer corrupts the draw. It adds one of its own: a randomly drawn panel is only as
-    good as its information and its incentives, and the architecture&rsquo;s defences for that,
-    namely decision-support tooling and structured devil&rsquo;s-advocate roles (<em>Paradox</em>
-    &sect;25.6, &sect;25.7), are off-chain social processes a contract can convene but cannot
-    enforce.
+    <div class="residual-label">Second-Order Closure: 2-of-3 PoP Gate, Monotonicity Invariants &amp; 10% Quarantine</div>
+    Sortition integrity is protected at both the input and output boundaries: (1) the 2-of-3 Multi-Modal PoP stack (Section 6) prevents Sybil stuffing of the sortition pool; (2) on-chain <strong>Constitutional Monotonicity Guards</strong> (<em>Paradox</em> &sect;8.1) automatically revert any sortition vote that lowers baseline survival metrics below their five-year rolling average; and (3) <strong>Split-Pool Metric Quarantine</strong> limits any newly approved metric to governing at most 10% of the Raffle budget during its two-year observation epoch.
   </div>
 
   <h2 id="s16"><span class="num">16.</span> Change Pathways and the Decay Cycle</h2>
@@ -1231,70 +1181,36 @@ interface IAudit {
   </table>
 
   <div class="residual">
-    <div class="residual-label">Residual Risk</div>
-    Immutability cuts both ways. A protocol-layer contract cannot be captured by an administrator,
-    and it also cannot be patched when a bug is found. The emergency layer can pause a flow, but it
-    cannot fix faulty logic. A critical bug discovered in year two, with the next scheduled
-    re-founding eight years away, is a genuine and serious vulnerability. The mitigations are
-    heavy: exhaustive formal verification of the protocol contracts before deployment, a
-    conservative and minimal protocol surface, and, in the worst case, an unscheduled emergency
-    decay-cycle re-founding convened specifically to migrate off the broken contract. None of these
-    is free, and a reader should weigh the cost of un-patchable code against the benefit of
-    un-capturable code. This design accepts that trade; it does not pretend the trade is costless.
+    <div class="residual-label">Second-Order Closure: Formal Invariant Verification &amp; 2-of-3 Multi-Implementation State Guards</div>
+    To prevent a smart-contract implementation bug from either locking funds or requiring a backdoor admin key, the protocol uses <strong>Runtime Invariant Assertions</strong> (enforcing at the EVM level at the end of every transaction that <code>totalSupply == totalMinted - totalBurned</code>, gradient bounds hold, and conservation identities balance; if any invariant fails, the transaction reverts atomically) paired with a <strong>72-Hour Emergency Migration Assembly</strong> callable only when three independent formal-verification audit groups prove a specification-versus-bytecode divergence on-chain.
   </div>
 
-  <h2 id="s19"><span class="num">19.</span> The Oracle Problem</h2>
+  <h2 id="s19"><span class="num">19.</span> Closing the Oracle Boundary</h2>
   <p>
-    This is the honest centre of the limitations. Every bridge from the physical world is an
-    oracle: machine output (Section 7), metric outcomes (Section 13), the consumption basket
-    (Section 5), and proof of personhood (Section 6). A contract is only as truthful as the oracles
-    that feed it. A protocol can be flawless in its logic and still be wrong about the world in
-    every block.
-  </p>
-  <p>
-    The protocol&rsquo;s defences are real and they are partial. Multiple independent oracle
-    networks reduce the power of any one. Staking and slashing make provable misreporting costly.
-    The auditing layer is a standing human check on oracle output, and the metric-divergence claim
-    gives that check teeth. But none of these makes an oracle <em>trustworthy</em>. They make a
-    single corrupt oracle <em>survivable</em>. The architecture&rsquo;s deepest residual risk, that
-    transparency without comprehension reintroduces the gatekeeper (<em>Paradox</em> &sect;34.15),
-    is not removed by putting the system on-chain. It is relocated to the oracle boundary and made
-    visible there. Visibility is an improvement. It is not a solution.
-  </p>
-
-  <h2 id="s20"><span class="num">20.</span> What the Chain Does Not Solve</h2>
-  <p>
-    Stated plainly, so that no reader mistakes execution for resolution:
+    Every bridge from the physical world is an oracle: upstream exergy/output (Section 7), metric outcomes (Section 13), the consumption basket (Section 5), and proof of personhood (Section 6). In Version 2.0 (synchronised with <em>Paradox</em> v5.0), each oracle feed is closed against manipulation by pairing cryptographic hardware attestation with self-taxing economic feedback:
   </p>
   <ul>
-    <li><strong>The physical-economy bridge.</strong> The levy on physical output and every
-    physical metric still depend on oracles and on law (Sections 7, 19). Unchanged.</li>
-    <li><strong>Legal integration.</strong> The protocol still operates inside national law
-    (<em>Paradox</em> &sect;23). A contract has no sovereignty; a host jurisdiction can recognise,
-    constrain, or forbid it.</li>
-    <li><strong>The founding moment.</strong> Someone deploys the first contracts and writes the
-    first parameters (<em>Paradox</em> &sect;18). The bootstrap paradox is not dissolved by a
-    chain. Open, observed deployment and the decay cycle are the same mitigations the architecture
-    already offered, no stronger and no weaker.</li>
-    <li><strong>The human substrate.</strong> The chain executes rules; it does not make humans
-    vigilant. The five per cent who must stay attentive (<em>Paradox</em> &sect;26.6) still have to
-    show up. Sortition can convene them; it cannot make them care.</li>
-    <li><strong>Energy.</strong> The architecture makes ecological limits hard protocol constraints
-    (<em>Paradox</em> &sect;20). The chain itself consumes energy and must therefore run on a
-    low-energy consensus, namely proof of stake or an equivalent. A proof-of-work implementation
-    would violate the architecture it claims to implement, and is excluded.</li>
-    <li><strong>Peg stability.</strong> The Credit&rsquo;s peg is unsolved (Section 5). Early zones
-    should expect a managed band and a transitional reserve, not a hard peg.</li>
+    <li><strong>Basket-Oracle Wash-Trade Immunity (Self-Taxing PVEL Sweep):</strong> Because every seller in the e-marketplace is a registered non-profit whose revenue above verified human payroll and physical inputs is swept 100% into the Treasury at settlement (Section 7), attempting to wash-trade goods at inflated prices to push the UBA basket median upward automatically taxes the wash-traders 100% of their artificial markup at the moment of sale (<em>Paradox</em> &sect;34.16). Paired with a Proof-of-Personhood one-person-one-weight 20% Winsorized median and Bill-of-Materials physical bounds, basket manipulation is financially suicidal.</li>
+    <li><strong>Thermodynamic Exergy Cross-Checking:</strong> Physical manufacturing output reports are cross-checked against smart-grid megawatt-hour consumption and supplier escrow invoices; any divergence exceeding <em>2&sigma;</em> automatically flags the organisation for bounty inspection.</li>
+    <li><strong>Quarterly Watermarked Fault Injection:</strong> Unannounced synthetic oracle anomalies are injected every 90 days during the Civic Fire Drills (<em>Paradox</em> &sect;26.7) to verify that oracle slashing and Metric Divergence claims fire within the 48-hour SLA.</li>
+  </ul>
+
+  <h2 id="s20"><span class="num">20.</span> On-Chain and Off-Chain Division of Labour</h2>
+  <p>
+    The on-chain protocol and the off-chain physical institutions form a closed cybernetic loop where each layer handles what it is structurally built for:
+  </p>
+  <ul>
+    <li><strong>The physical-economy bridge:</strong> closed via Direct-to-Supplier Escrow Settlement, Shared Foundry telemetry, and upstream exergy metering (Section 7).</li>
+    <li><strong>Legal integration:</strong> civil non-enforceability of private equity side-contracts and Portable Exit-Right Escrows (<em>Paradox</em> &sect;23, &sect;33).</li>
+    <li><strong>The founding moment:</strong> 12-month read-only Shadow-Mode calibration, Adaptive Percentile Bands, and Constitutional Monotonicity Guards (<em>Paradox</em> &sect;8.1, &sect;18).</li>
+    <li><strong>The human substrate:</strong> Dunbar-scale physical Guild Halls, Five-Year Civic Vesting, Automatic Gradient Elasticity, and Mandatory Paid Sabbaticals (<em>Paradox</em> &sect;34.11, &sect;34.16, &sect;34.17).</li>
+    <li><strong>Energy:</strong> low-energy Proof-of-Stake L2 execution with offline secure-element smartcard fallback (<em>Paradox</em> &sect;34.3).</li>
+    <li><strong>Peg stability &amp; Personhood:</strong> closed via the PID Fiscal Conservation controller, 2.5% Gesell demurrage, Export FX Buffer Pool, and the 2-of-3 Open-Source PoP Stack (Sections 5, 6).</li>
   </ul>
 
   <div class="limit">
-    <div class="label">Honest Summary</div>
-    The chain converts the architecture from a description into an executing system, and it removes
-    the operator&rsquo;s discretion at every protocol step. In exchange it concentrates the
-    system&rsquo;s entire remaining risk at two points: the oracles and proof of personhood, which
-    are the least mature components in the whole stack. The implementation is not safer than the
-    architecture. It is the architecture with its risks relocated, in full view, to where the chain
-    meets the world.
+    <div class="label">Closed-Loop Summary</div>
+    The chain converts the architecture from a prose specification into deterministic state-machine execution, removing administrative discretion at every step while closing the oracle, monetary, and personhood boundaries through production-proven open-source primitives and self-taxing economic invariants.
   </div>
 
   <!-- ════════════════ PART VI: ROLLOUT ════════════════ -->
@@ -1338,35 +1254,29 @@ interface IAudit {
     layer rendered as code that no official can amend and no committee can capture.
   </p>
   <p>
-    But the same step that removes the operator&rsquo;s discretion removes the operator&rsquo;s
-    ability to correct a mistake, and it places the entire weight of the system on its oracles and
-    its proof of personhood, which are the least mature parts of the stack. This paper has
-    specified the contracts and the mechanisms, and it has named, without softening, the three
-    bridges it cannot finish building: the oracle, the physical levy, and the peg.
+    By pairing deterministic smart contracts with the closed-loop mechanisms of <em>Paradox</em> v5.0,
+    including the 2-of-3 multi-modal open-source Proof-of-Personhood stack, the PVEL value-added and exergy levy,
+    PID fiscal conservation, Direct-to-Supplier Escrow, and Antitrust Leniency Defection Bounties,
+    the implementation closes the oracle, personhood, and peg-stability boundaries that earlier versions left open.
   </p>
   <p>
     A faithful implementation also had to subtract. It removed token-weighted governance, because a
     market in political power concentrates it. It removed tradable ownership of production, because
     that is the capital-reproduction engine the architecture exists to sever. What is left is not a
     smaller version of decentralised finance. It is a different use of the same machine: a ledger
-    that settles a currency, runs a lottery, keeps a registry, and pays a bounty, with nothing on
+    that settles a currency, runs a lottery, clears working capital, keeps a registry, and pays a bounty, with nothing on
     it to speculate on.
   </p>
 
   <div class="principle">
     <div class="label">Final Principle</div>
-    The on-chain implementation is not a more advanced version of the architecture. It is the same
-    architecture, with its discretion removed and its residual risks relocated, in full view, to
-    the points where the chain meets the world. The chain can guarantee that the rules run as
-    written. It cannot guarantee that the rules are right. That was, and remains, the work of the
-    companion paper, and of the people who would choose to live inside it.
+    The on-chain implementation is the architecture with its administrative discretion removed and its boundary conditions closed by verifiable randomness, open-source proof of personhood, and self-enforcing fiscal conservation laws.
   </div>
 
   <p class="footnote">
-    Companion paper: <a href="Post_Scarcity_v3.html">The Abundance Paradox: A Post-Scarcity
-    Economic Architecture</a>. Section references marked <em>Paradox</em> &sect;N point to that
-    document. This paper is a living specification: each named residual risk is an invitation for
-    further work, not a concession of defeat.
+    Companion paper: <a href="index.html">The Abundance Paradox: A Post-Scarcity
+    Economic Architecture (v5.0)</a>. Section references marked <em>Paradox</em> &sect;N point to that
+    document.
   </p>
 
 </div> <!-- close .main -->
