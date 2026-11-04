@@ -620,10 +620,12 @@
     <li class="sub"><a href="#s12-1">&nbsp; 12.1 Digital Infrastructure</a></li>
     <li class="sub"><a href="#s12-2">&nbsp; 12.2 AI System Governance</a></li>
     <li class="sub"><a href="#s12-3">&nbsp; 12.3 Second-Hand &amp; Tort Pool</a></li>
+    <li class="sub"><a href="#s12-4">&nbsp; 12.4 Human Queues &amp; Events</a></li>
     <li><a href="#s13">13. Tiers &amp; Megaprojects</a></li>
     <li class="sub"><a href="#s13-1">&nbsp; 13.1 Land, Foundries &amp; N+2</a></li>
     <li class="sub"><a href="#s13-2">&nbsp; 13.2 Housing Ops &amp; Mortgages</a></li>
     <li><a href="#s14">14. Decentralized Auditing</a></li>
+    <li class="sub"><a href="#s14-1">&nbsp; 14.1 Privacy Firewall</a></li>
     <li><a href="#s15">15. Auditor Incentives</a></li>
     <li class="sub"><a href="#s15-1">&nbsp; 15.1 Symmetric Stakes</a></li>
     <li class="sub"><a href="#s15-2">&nbsp; 15.2 Collusion &amp; Leniency</a></li>
@@ -1432,6 +1434,20 @@
     </li>
   </ul>
 
+  <h3 id="s12-4">12.4 Allocation of Non-Scalable Human Expertise and Positional Events (Without Waiting Lists or Cronyism)</h3>
+  <p>
+    Automation drives the marginal cost of manufactured goods and digital software toward zero, but it cannot clone a specific world-renowned pediatric neurosurgeon who can perform only four surgeries per week, nor can it fit 50,000 fans into a 2,000-seat symphony hall or cup final. In historic non-market economies, pricing non-scalable human services and positional events at zero or marginal cost produced multi-year waiting lists, ticket scalping, and backroom cronyism (<em>blat</em> / <em>protektzia</em>). Two mechanisms close this gap cleanly:
+  </p>
+  <ol>
+    <li><strong>Double-Blind Clinical Triage &amp; Mandatory Co-Surgery Apprenticeship (Healthcare).</strong> Access to scarce medical specialists is never rationed by personal wealth or personal connections. Referral queues are ordered strictly by an open-source, <strong>Double-Blind Clinical Urgency Index</strong> (QALYs-at-risk and severity of pathology evaluated on anonymised patient charts). Furthermore, any specialist whose clinical queue exceeds 30 days triggers a mandatory <strong>Guild Co-Surgery &amp; Apprenticeship Multiplier</strong> (Section 34.4): the specialist&rsquo;s operating schedule is automatically paired with senior fellows from neighboring hospitals to transfer technique and expand specialist supply.</li>
+    <li><strong>Soulbound VRF Lotteries + Dynamic Congestion Clearing (Cultural, Sporting &amp; Dining Events).</strong> For finite-seat concerts, theatre, sports finals, or high-demand artisanal dining where physical capacity cannot expand immediately:
+      <ul>
+        <li><strong>Zero Scalping via Soulbound Passes:</strong> Every event reservation or ticket is issued as a non-transferable, personhood-bound pass (if a holder cancels, the pass returns automatically to the protocol queue at face value, making secondary-market ticket scalping technically impossible).</li>
+        <li><strong>50/50 Hybrid Allocation (Equal Access + Revealed Urgency):</strong> Half of all seats are allocated at marginal cost via a verifiable-random lottery (so every citizen, regardless of income, has equal access to premier cultural events); the other half clears via a <strong>Dynamic Congestion Credit Price</strong> where 100% of the congestion surcharge above operating cost is burned in Sink A (Section 10.1), while sustained congestion automatically increases the performer&rsquo;s or venue&rsquo;s Capped Gradient performance score and funds additional show dates.</li>
+      </ul>
+    </li>
+  </ol>
+
   <h2 id="s13"><span class="num">13.</span> Project Tiers and Megaprojects</h2>
 
   <table class="arch-table">
@@ -1534,7 +1550,7 @@
   <h4>Three Freedoms</h4>
   <ol>
     <li><strong>Freedom to form:</strong> zero barrier to creating an auditing group. No licence, no approval, no minimum credentials. Anyone can audit anything.</li>
-    <li><strong>Freedom of access:</strong> every auditing group has identical access to all project data. No tiered clearance, no &ldquo;authorised auditor&rdquo; status. If the data exists, any auditor can see it.</li>
+    <li><strong>Freedom of access:</strong> every auditing group has identical access to all project data. No tiered clearance, no &ldquo;authorised auditor&rdquo; status. If the project data exists, any auditor can see it.</li>
     <li><strong>Freedom to publish:</strong> no gatekeeper between an auditing group and the public. Findings are published directly. No approval chain, no review board, no suppression mechanism.</li>
   </ol>
   <p>
@@ -1542,6 +1558,18 @@
     incumbents control who watches. Remove access and auditors operate blind. Remove publication
     and findings can be buried. All three must hold simultaneously.
   </p>
+
+  <h3 id="s14-1">14.1 The Asymmetric Privacy Firewall: Radical Transparency for Organisations, Zero-Knowledge Privacy for Citizens</h3>
+  <p>
+    A critical constitutional boundary separates public production from private life: if &ldquo;every auditing group can see all data,&rdquo; does that mean an auditor, a neighbour, or an ex-spouse can inspect what psychiatric medication a citizen bought, what books they read, who they visited, or how they spent their personal UBA? If personal consumption were public, the architecture would construct a totalitarian surveillance panopticon.
+  </p>
+  <p>
+    The protocol prevents surveillance by encoding the cypherpunk law of <strong>Asymmetric Transparency</strong> (<em>transparency is strictly proportional to public power; privacy is strictly proportional to individual vulnerability</em>):
+  </p>
+  <ul>
+    <li><strong>100% Public Cleartext Ledgers for Execution Organisations.</strong> Every organisation drawing Raffle grants, Working-Capital Credit Lines, or Shared Foundry leases is a public-purpose entity operating on a 100% transparent, line-item auditable cleartext ledger. Organisations have zero right to financial secrecy.</li>
+    <li><strong>Zero-Knowledge Shielded Wallets for Individual Citizens.</strong> Individual residents&rsquo; personal wallets use <strong>Zero-Knowledge Shielded Balances and Stealth/Ring Settlement</strong> (built on zk-SNARK commitment-nullifier schemes). When a citizen purchases medication, books, or food in the e-marketplace, the merchant&rsquo;s public account records <code>+10 Credits (Product SKU #402)</code> while the buyer&rsquo;s wallet generates a zero-knowledge proof attesting that: (1) the payment came from a valid, unspent Credit balance; (2) the buyer is a unique Proof-of-Personhood identity (allowing the basket oracle to compute the one-person-one-weight Winsorized median, Section 34.16, without knowing <em>which</em> person bought the item); and (3) any applicable 2.5% demurrage above the 2x annual basket threshold has been burned in zero-knowledge. No auditor, state official, or neighbour can ever link a citizen&rsquo;s identity to their personal purchases, locations, or private peer-to-peer transfers.</li>
+  </ul>
 
   <h2 id="s15"><span class="num">15.</span> Auditor Incentives and Harm-Prevented Scaling</h2>
   <p>
@@ -3492,7 +3520,7 @@
         &bull; <strong>Physical Means of Production (&sect;13.1):</strong> Added Shared Industrial Foundry Trusts, Impact-Weighted Harberger Commons Leases, Location-Adjusted UBA housing, and N+2 Geographic Redundancy Mandate.<br>
         &bull; <strong>Game-Theoretic Auditing &amp; AI Governance (&sect;12.1&ndash;12.2, &sect;15.1&ndash;15.2):</strong> Added Multi-Client Constitutional Pluralism, 2&sigma; Counterfactual Canary Fuzzing for black-box AI, Harm-Prevented time-decay bounties, Conscripted VRF confirmation juries with 14/28-day expiry, Annual Dissident Stake Vouchers, Logarithmic Jury Scaling, Sealed Commit-Reveal, and Antitrust Leniency Defection Bounties.<br>
         &bull; <strong>Transition, Wealth &amp; Sociology (&sect;8.1, &sect;17.5&ndash;23, &sect;26.7, &sect;33&ndash;34):</strong> Added Constitutional Monotonicity Guards, 10% Split-Pool Metric Quarantine, 3-Sigma CUSUM scarcity triggers, 48-hour saboteur lease reallocation, Day-1 Sovereign Lifetime Consumption Annuities (conditional on intact plant handover), 1:1 Protected Pension-to-Annuity Swap for middle-class retirement funds (&sect;22.1), Non-Contiguous Hanseatic Archipelago, Zero-IP Export Shield, Portable Exit-Right Escrow, Quarterly Red-Team Civic Fire Drills, Automatic Gradient Elasticity Controller, Dunbar-Scale Physical Guild Halls, 5-Year Linear Civic Vesting Curve, Child/Disability UBA Multipliers, Self-Taxing Basket Oracle Wash-Trade Immunity, and Mandatory Paid Vigilance Sabbaticals.<br>
-        &bull; <strong>Everyday Household &amp; Micro-Operational Closures (&sect;10.4&ndash;10.5, &sect;11.3, &sect;12.3, &sect;13.2):</strong> Added formal proof of why equity stocks and interest-bearing savings are prohibited (&sect;10.4); Zero-Interest UBA Stream Advances for lumpy household purchases and 15% Annual Personal Travel FX Allowance (&sect;10.5); Frictionless Sole-Artisan / Micro-Co-Op registration (no raffle needed for everyday personal services), Coordinape-style internal team pay matrices, and no-fault co-founder replacement (&sect;11.3); Peer-to-Peer Second-Hand Personal Property Exemption and Automated No-Fault Tort &amp; Product-Liability Pool (&sect;12.3); and Competitive Non-Profit Building Stewards (51% tenant-switchable), 6-Month Graceful Lease Transition Buffer, and Day-1 0% Mortgage Novation for existing homeowners (&sect;13.2).</td>
+        &bull; <strong>Everyday Household &amp; Micro-Operational Closures (&sect;10.4&ndash;10.5, &sect;11.2&ndash;11.3, &sect;12.3&ndash;12.4, &sect;13.2, &sect;14.1, &sect;32):</strong> Added formal proof of why equity stocks and interest-bearing savings are prohibited (&sect;10.4); Zero-Interest UBA Stream Advances for lumpy household purchases and 15% Annual Personal Travel FX Allowance (&sect;10.5); Automatic Zombie Sunset (90-day decommissioning for obsolete enterprises) and skin-in-the-game principal refund rules for Escape Hatch Co-Ops (&sect;11.2); Frictionless Sole-Artisan / Micro-Co-Op registration, Coordinape-style internal team pay matrices, no-fault co-founder replacement, and blind credential hiring with 90-day paid trial rotations (&sect;11.3); Peer-to-Peer Second-Hand Personal Property Exemption and Automated No-Fault Tort &amp; Product-Liability Pool (&sect;12.3); Non-Scalable Human Queue Allocation via double-blind clinical triage and 50/50 soulbound VRF + congestion clearing for cultural events (&sect;12.4); Competitive Non-Profit Building Stewards (51% tenant-switchable), 6-Month Graceful Lease Transition Buffer, and Day-1 0% Mortgage Novation for existing homeowners (&sect;13.2); Asymmetric Privacy Firewall providing 100% public ledgers for organisations and ZK-SNARK shielded wallets for private citizens (&sect;14.1); and MACI Cryptographic Duress / Panic Keys against physical extortion and vote-buying (&sect;32 Attack 6).</td>
       </tr>
     </tbody>
   </table>
